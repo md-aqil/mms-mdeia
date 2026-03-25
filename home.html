@@ -1,0 +1,1205 @@
+<html class="scroll-smooth" lang="en">
+
+<head></head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary/20">```html
+
+
+
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Magnificence Media | Transforming Brands Into Market Leaders</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6200EE",
+                        "primary-dark": "#4b00d1",
+                        "tertiary-fixed-dim": "#ec9e00",
+                        "error-dim": "#a70138",
+                        "primary-container": "#f3e8ff",
+                        "on-tertiary-fixed-variant": "#5b3b00",
+                        "surface-tint": "#6200EE",
+                        "on-surface-variant": "#5a5c5c",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d2d5d5",
+                        "error-container": "#f74b6d",
+                        "tertiary": "#7e5200",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#dbdddd",
+                        "surface-bright": "#f6f6f6",
+                        "secondary-fixed": "#68fadd",
+                        "secondary-dim": "#005a4d",
+                        "secondary-fixed-dim": "#56ebcf",
+                        "tertiary-container": "#feaa00",
+                        "inverse-on-surface": "#9c9d9d",
+                        "on-primary-container": "#1e005a",
+                        "inverse-surface": "#0c0f0f",
+                        "on-secondary-fixed": "#00483d",
+                        "on-tertiary-container": "#503300",
+                        "background": "#fdfcff",
+                        "on-secondary": "#c2ffef",
+                        "on-secondary-container": "#005d4f",
+                        "primary-fixed-dim": "#9c7eff",
+                        "secondary-container": "#68fadd",
+                        "on-secondary-fixed-variant": "#006859",
+                        "tertiary-dim": "#6e4800",
+                        "tertiary-fixed": "#feaa00",
+                        "outline-variant": "#acadad",
+                        "on-primary-fixed": "#000000",
+                        "on-error": "#ffefef",
+                        "outline": "#757777",
+                        "on-tertiary-fixed": "#331f00",
+                        "on-primary-fixed-variant": "#32008a",
+                        "surface-container": "#e7e8e8",
+                        "on-error-container": "#510017",
+                        "primary-dim": "#5819db",
+                        "surface-container-highest": "#dbdddd",
+                        "on-background": "#1c1b1f",
+                        "inverse-primary": "#9a7bff",
+                        "on-tertiary": "#fff0e2",
+                        "surface": "#fdfcff",
+                        "primary-fixed": "#a98fff",
+                        "secondary": "#006859",
+                        "surface-container-low": "#f4f3f7",
+                        "error": "#b41340",
+                        "on-surface": "#1c1b1f",
+                        "surface-container-high": "#e1e3e3"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .text-brand-gradient {
+            background: linear-gradient(to right, #006859, #22c55e, #eab308, #f97316, #ef4444, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .icon-brand-gradient {
+            background: linear-gradient(135deg, #006859, #22c55e, #eab308, #f97316, #ef4444, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .bg-brand-gradient {
+            background: linear-gradient(135deg, #006859, #22c55e, #eab308, #f97316, #ef4444, #9333ea);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(24px) saturate(180%);
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        .btn-primary {
+            background-color: #6200EE;
+            color: white;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-primary:hover {
+            background-color: #4b00d1;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px -6px rgba(98, 0, 238, 0.5);
+        }
+
+        .btn-outline {
+            border: 2px solid #dbdddd;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-outline:hover {
+            border-color: #6200EE;
+            color: #6200EE;
+            background-color: rgba(98, 0, 238, 0.04);
+            transform: translateY(-3px);
+        }
+
+        .card-hover {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        .section-container {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-container {
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .section-container {
+                padding-left: 5rem;
+                padding-right: 5rem;
+            }
+        }
+
+        /* Mobile menu transition */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        #mobile-menu.open {
+            max-height: 600px;
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .portfolio-masonry {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-auto-rows: 250px;
+            gap: 2rem;
+        }
+
+        .portfolio-item-large {
+            grid-row: span 2;
+        }
+
+        .portfolio-item-wide {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 1024px) {
+            .portfolio-item-wide {
+                grid-column: span 1;
+            }
+        }
+    </style>
+    <!-- Top Navigation Style: Split Editorial Header -->
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-surface-container/30">
+        <div class="px-6 lg:px-12 py-3 lg:py-4 max-w-[1800px] mx-auto">
+
+            <!-- Desktop Layout: Split Navigation -->
+            <div class="hidden lg:grid grid-cols-3 items-center">
+                <!-- Left Links -->
+                <div class="flex items-center gap-6 xl:gap-10">
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-xs xl:text-sm uppercase tracking-[0.2em]"
+                        href="#home">Home</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-xs xl:text-sm uppercase tracking-[0.2em]"
+                        href="#services">Services</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-xs xl:text-sm uppercase tracking-[0.2em]"
+                        href="#about">About</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-xs xl:text-sm uppercase tracking-[0.2em]"
+                        href="#why-choose-us">Why Us</a>
+                </div>
+
+                <!-- Center: MODERATE SIZED PROMINENT LOGO -->
+                <div
+                    class="flex flex-col items-center justify-center transform origin-top transition-transform duration-500 hover:scale-[1.02]">
+                    <img id="main-logo" alt="Magnificence Media Logo"
+                        class="h-24 xl:h-28 w-auto object-contain drop-shadow-sm transition-all duration-500"
+                        src="logo.png" />
+                </div>
+
+                <!-- Right Links -->
+                <div class="flex items-center justify-end gap-6 xl:gap-8">
+                    <a class="text-primary font-extrabold text-xs xl:text-sm uppercase tracking-[0.2em]"
+                        href="#portfolio">Work</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-xs xl:text-sm uppercase tracking-[0.2em]"
+                        href="#process">Process</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-xs xl:text-sm uppercase tracking-[0.2em]"
+                        href="#contact">Contact</a>
+                    <button
+                        class="btn-primary px-7 py-3 rounded-full font-black text-xs xl:text-sm shadow-xl shadow-primary/20 hover:scale-105 transition-all"
+                        style="white-space: nowrap;">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Layout -->
+            <div class="flex lg:hidden justify-between items-center transition-all duration-500"
+                id="mobile-header-container">
+                <img id="mobile-logo" alt="Magnificence Media Logo"
+                    class="h-16 sm:h-20 w-auto object-contain transition-all duration-500" src="logo.png" />
+                <button id="mobile-menu-btn" class="text-on-surface p-2 focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="lg:hidden bg-white/95 backdrop-blur-xl border-b border-surface-container/30 px-6 flex flex-col gap-4 shadow-xl">
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest"
+                href="#home">Home</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest"
+                href="#services">Services</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest"
+                href="#about">About</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest"
+                href="#why-choose-us">Why Us</a>
+            <a class="text-primary font-extrabold text-sm uppercase tracking-widest" href="#portfolio">Work</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest"
+                href="#process">Process</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest"
+                href="#team">Team</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest"
+                href="#contact">Contact</a>
+            <button class="btn-primary px-7 py-3 mt-2 rounded-xl font-extrabold text-sm shadow-sm w-full">
+                Get Started
+            </button>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('open');
+            });
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.remove('open');
+                });
+            });
+
+            // Shrink Logo on Scroll
+            const mainLogo = document.getElementById('main-logo');
+            const mobileLogo = document.getElementById('mobile-logo');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    if (mainLogo) {
+                        mainLogo.classList.remove('h-20', 'h-24', 'xl:h-20', 'xl:h-28');
+                        mainLogo.classList.add('h-10', 'xl:h-12');
+                    }
+                    if (mobileLogo) {
+                        mobileLogo.classList.remove('h-14', 'h-16', 'sm:h-16', 'sm:h-20');
+                        mobileLogo.classList.add('h-10', 'sm:h-12');
+                    }
+                } else {
+                    if (mainLogo) {
+                        mainLogo.classList.add('h-24', 'xl:h-28');
+                        mainLogo.classList.remove('h-10', 'xl:h-12');
+                    }
+                    if (mobileLogo) {
+                        mobileLogo.classList.add('h-16', 'sm:h-20');
+                        mobileLogo.classList.remove('h-10', 'sm:h-12');
+                    }
+                }
+            });
+
+            // Form submission handler with loader
+            const form = document.querySelector('form[action="https://formspree.io/f/mlgorqbj"]');
+            if (form) {
+                const submitBtn = document.getElementById('submit-btn');
+                const btnText = document.getElementById('btn-text');
+                const btnLoader = document.getElementById('btn-loader');
+
+                form.addEventListener('submit', function () {
+                    // Disable button and show loader
+                    submitBtn.disabled = true;
+                    submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+                    btnText.classList.add('hidden');
+                    btnLoader.classList.remove('hidden');
+
+                    // Re-enable after 5 seconds
+                    setTimeout(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                        btnText.classList.remove('hidden');
+                        btnLoader.classList.add('hidden');
+                    }, 5000);
+                });
+            }
+        });
+    </script>
+    <!-- Hero Section -->
+    <section class="relative pt-44 md:pt-45 pb-16 md:pb-16 overflow-hidden bg-white" id="home">
+        <div
+            class="section-container grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10 animate-fade-in-up">
+            <div class="space-y-6 md:space-y-8 text-center lg:text-left">
+                <div
+                    class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary-container/60 text-primary font-extrabold text-xs tracking-widest uppercase border border-primary/10">
+                    <span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+                    India's Premier Ad Agency
+                </div>
+                <h1
+                    class="text-4xl md:text-6xl lg:text-7xl font-black font-headline text-on-surface leading-[1.1] tracking-tighter">
+                    Transforming Brands Into <br class="hidden lg:block" /><span class="text-brand-gradient">Market
+                        Leaders</span>
+                </h1>
+                <p
+                    class="text-lg md:text-xl text-on-surface-variant max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
+                    We orchestrate high-impact advertising experiences through a fusion of data-driven strategy and
+                    boundless creative vision.
+                </p>
+                <div class="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4 pt-4">
+                    <button class="btn-primary w-full sm:w-auto px-10 py-4 rounded-2xl font-black text-lg">
+                        Launch Campaign
+                    </button>
+                    <button class="btn-outline w-full sm:w-auto px-10 py-4 rounded-2xl font-black text-lg">
+                        Our Services
+                    </button>
+                </div>
+            </div>
+            <div class="relative group">
+                <div
+                    class="aspect-[1.2/1] rounded-[2.5rem] overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] ring-1 ring-black/5">
+                    <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                        <source src="hero-banner.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div
+                    class="absolute -bottom-8 -left-8 bg-white/90 backdrop-blur-xl p-7 rounded-[2rem] shadow-2xl max-w-[280px] border border-white">
+                    <div class="flex items-center gap-4 mb-3">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-[#6200ee10] flex items-center justify-center hover:bg-[#6200ee30] transition-colors">
+                            <span class="material-symbols-outlined font-black text-primary">trending_up</span>
+                        </div>
+                        <div>
+                            <p class="text-xs text-on-surface-variant font-bold uppercase tracking-wider">Growth Metrics
+                            </p>
+                            <p class="text-2xl font-black font-headline tracking-tight">250%+</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">Average lift in brand engagement for our
+                        2024 partners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 lg:py-32 bg-surface" id="about">
+        <div class="section-container grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+            <div class="grid grid-cols-2 gap-4 md:gap-6 animate-fade-in-up">
+                <div class="space-y-6">
+                    <img alt="Creative team brainstorming" class="rounded-[2rem] aspect-[4/5] object-cover shadow-2xl"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuChIHla3XA3MIuuABuraxwjbI57-TKf3xZtVKEb77gdI8wVYSIyDx_hjveYTbI21hFUBCOnKnccHtIak--rvGBupevLUthnUlJd9ewSe0Lfg3lDpd4qiaxJre4U9Xj5F46MKRQGHuphXGCCpdt_4M5wfUIz3CydAC7vIBxkUS3F9Xvxgca0WCNbY108oz0Ma4d6mnn9Zv0964Ekrx6cyhwURiDh9OhLr4y1aNO1gQmBba2-HsqQlpYnvqyLFI_hVuM6_tYSoTSC-JI" />
+                    <div class="bg-primary p-8 rounded-[2rem] text-white shadow-xl shadow-primary/20">
+                        <h4 class="text-4xl font-black font-headline mb-1">08+</h4>
+                        <p class="text-xs font-black uppercase tracking-widest opacity-80">Years of Impact</p>
+                    </div>
+                </div>
+                <div class="space-y-6 pt-16">
+                    <div class="bg-tertiary-container p-8 rounded-[2rem] text-on-tertiary-container shadow-xl">
+                        <h4 class="text-4xl font-black font-headline mb-1">500+</h4>
+                        <p class="text-xs font-black uppercase tracking-widest opacity-80">Campaigns Led</p>
+                    </div>
+                    <video autoplay loop muted playsinline
+                        class="rounded-[2rem] aspect-[4/5] w-full object-cover shadow-[0_20px_40px_rgba(45,47,47,0.06)]">
+                        <source src="bill1.MP4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="space-y-8">
+                <h2 class="text-sm font-black tracking-[0.3em] text-primary uppercase">Who We Are</h2>
+                <h3 class="text-4xl lg:text-5xl font-black font-headline leading-tight tracking-tight text-on-surface">
+                    Beyond Simple
+                    Satisfaction, We Build Lasting Relationships.</h3>
+                <p class="text-lg text-on-surface-variant leading-relaxed font-medium">
+                    Magnificence Media is a high-growth, full-service marketing powerhouse. We specialize in cinematic
+                    storytelling, strategic advertising, and artistic film production that moves the needle for brands.
+                </p>
+                <div class="h-[2px] w-full bg-gradient-to-r from-primary/30 via-transparent to-transparent"></div>
+                <div class="grid grid-cols-2 gap-10 pt-4">
+                    <div class="group">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="material-symbols-outlined font-black text-primary">visibility</span>
+                            <p class="font-headline font-black text-lg">Our Vision</p>
+                        </div>
+                        <p class="text-sm text-on-surface-variant leading-relaxed font-medium">Continuously redefining
+                            how ambitious brands connect with modern audiences.</p>
+                    </div>
+                    <div class="group">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="material-symbols-outlined font-black text-primary">rocket_launch</span>
+                            <p class="font-headline font-black text-lg">Our Mission</p>
+                        </div>
+                        <p class="text-sm text-on-surface-variant leading-relaxed font-medium">Empowering growth through
+                            rigorous strategy and artistic excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section: The Titans Showcase -->
+    <section class="relative overflow-hidden min-h-screen flex flex-col justify-center bg-inverse-surface">
+        <!-- Cinematic Video Background -->
+        <div class="absolute inset-0 z-0">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-30 mix-blend-luminosity">
+                <source src="hero-banner.mp4" type="video/mp4">
+            </video>
+            <!-- Heavy dark atmospheric overlay -->
+            <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+        </div>
+
+        <div class="section-container relative z-10 w-full py-16 flex flex-col items-center justify-center">
+
+            <!-- Elegant editorial typography -->
+            <div class="mb-20 md:mb-32 text-center w-full max-w-4xl mx-auto">
+                <h2 class="text-sm font-black tracking-[0.5em] text-white/50 uppercase mb-6">Trusted Synergy</h2>
+                <h3
+                    class="text-4xl md:text-5xl lg:text-7xl font-black font-headline text-white leading-tight tracking-tighter">
+                    Empowering The <br class="hidden md:block" /><span class="text-brand-gradient">Industry
+                        Titans</span>
+                </h3>
+            </div>
+
+            <!-- Floating pure-white logos without boxes -->
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 lg:gap-32 px-4 w-full">
+                <div class="flex justify-center">
+                    <img alt="Duke logo" class="h-10 md:h-14 lg:h-16 w-auto object-contain brightness-0 invert"
+                        src="Clients/duke.png" />
+                </div>
+                <div class="flex justify-center">
+                    <img alt="Hero logo" class="h-10 md:h-14 lg:h-16 w-auto object-contain brightness-0 invert"
+                        src="Clients/hero.png" />
+                </div>
+                <div class="flex justify-center">
+                    <img alt="Mama logo" class="h-10 md:h-14 lg:h-16 w-auto object-contain brightness-0 invert"
+                        src="Clients/mama.png" />
+                </div>
+                <div class="flex justify-center">
+                    <img alt="Tanisk logo" class="h-10 md:h-14 lg:h-16 w-auto object-contain brightness-0 invert"
+                        src="Clients/tanisk.png" />
+                </div>
+                <div class="flex justify-center">
+                    <img alt="Zomato logo" class="h-10 md:h-14 lg:h-16 w-auto object-contain brightness-0 invert"
+                        src="Clients/zomato.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-20 lg:py-32 bg-surface-container-low" id="services">
+        <div class="section-container">
+            <div
+                class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20 gap-6 md:gap-8">
+                <div class="max-w-3xl">
+                    <h2 class="text-sm font-black tracking-[0.3em] text-primary uppercase mb-4">What We Offer</h2>
+                    <h3 class="text-4xl lg:text-5xl font-black font-headline leading-tight tracking-tight">Our
+                        Advertising Ecosystem
+                    </h3>
+                </div>
+                <button class="btn-primary px-10 py-4 rounded-2xl font-black text-lg w-full md:w-auto">
+                    Start Your Journey
+                </button>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Service Cards -->
+                <div class="card-hover group p-8 rounded-[2.5rem] bg-white border border-surface-variant/40">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-[#6200ee10] flex items-center justify-center mb-6 group-hover:bg-[#6200ee30] transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary font-black">ads_click</span>
+                    </div>
+                    <h4 class="text-xl font-black font-headline mb-4 group-hover:text-primary transition-colors">Outdoor
+                        (OOH)</h4>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-medium">High-impact billboards and
+                        transit media that dominate urban landscapes.</p>
+                </div>
+                <div class="card-hover group p-8 rounded-[2.5rem] bg-white border border-surface-variant/40">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-[#6200ee10] flex items-center justify-center mb-6 group-hover:bg-[#6200ee30] transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary font-black">movie</span>
+                    </div>
+                    <h4 class="text-xl font-black font-headline mb-4 group-hover:text-primary transition-colors">Cinema
+                        Ads</h4>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-medium">Immersive big-screen
+                        placements during premium nationwide releases.</p>
+                </div>
+                <div class="card-hover group p-8 rounded-[2.5rem] bg-white border border-surface-variant/40">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-[#6200ee10] flex items-center justify-center mb-6 group-hover:bg-[#6200ee30] transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary font-black">radio</span>
+                    </div>
+                    <h4 class="text-xl font-black font-headline mb-4 group-hover:text-primary transition-colors">Radio
+                        &amp; TV</h4>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-medium">Prime-time broadcast slots
+                        reaching millions across the country.</p>
+                </div>
+                <div class="card-hover group p-8 rounded-[2.5rem] bg-white border border-surface-variant/40">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-[#6200ee10] flex items-center justify-center mb-6 group-hover:bg-[#6200ee30] transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary font-black">newspaper</span>
+                    </div>
+                    <h4 class="text-xl font-black font-headline mb-4 group-hover:text-primary transition-colors">
+                        Newspaper</h4>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-medium">Precision-targeted print
+                        strategies for high-trust national coverage.</p>
+                </div>
+                <div class="card-hover group p-8 rounded-[2.5rem] bg-white border border-surface-variant/40">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-[#6200ee10] flex items-center justify-center mb-6 group-hover:bg-[#6200ee30] transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary font-black">shopping_bag</span>
+                    </div>
+                    <h4 class="text-xl font-black font-headline mb-4 group-hover:text-primary transition-colors">Mall
+                        &amp; Retail</h4>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-medium">Point-of-sale influence and
+                        high-traffic shopping center activations.</p>
+                </div>
+                <div class="card-hover group p-8 rounded-[2.5rem] bg-white border border-surface-variant/40">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-[#6200ee10] flex items-center justify-center mb-6 group-hover:bg-[#6200ee30] transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary font-black">directions_bus</span>
+                    </div>
+                    <h4 class="text-xl font-black font-headline mb-4 group-hover:text-primary transition-colors">Mobile
+                        Branding</h4>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-medium">Dynamic billboards on the
+                        move through the heart of busy metros.</p>
+                </div>
+                <div class="card-hover group p-8 rounded-[2.5rem] bg-white border border-surface-variant/40">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-[#6200ee10] flex items-center justify-center mb-6 group-hover:bg-[#6200ee30] transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary font-black">wallpaper</span>
+                    </div>
+                    <h4 class="text-xl font-black font-headline mb-4 group-hover:text-primary transition-colors">Digital
+                        Wall</h4>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-medium">Immersive building wraps and
+                        futuristic large-format digital assets.</p>
+                </div>
+                <div class="card-hover group p-8 rounded-[2.5rem] bg-white border border-surface-variant/40">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-[#6200ee10] flex items-center justify-center mb-6 group-hover:bg-[#6200ee30] transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary font-black">print</span>
+                    </div>
+                    <h4 class="text-xl font-black font-headline mb-4 group-hover:text-primary transition-colors">Premium
+                        Print</h4>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-medium">Ultra-high resolution
+                        physical branding solutions for any scale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why Choose Us - Premium Editorial Style -->
+    <section class="py-20 bg-surface text-on-surface overflow-hidden" id="why-choose-us">
+        <div class="section-container">
+            <h2 class="text-center text-sm font-black tracking-[0.3em] text-primary uppercase mb-4 animate-fade-in-up">
+                Why Choose Us</h2>
+            <h3 class="text-center text-4xl lg:text-5xl font-black font-headline mb-16 tracking-tight animate-fade-in-up"
+                style="animation-delay: 0.1s;">The Advantage of Excellence
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Large Feature: 2 cols -->
+                <div
+                    class="md:col-span-2 lg:col-span-2 bg-[#ffffff] rounded-[2rem] p-10 flex flex-col justify-end relative overflow-hidden group hover:-translate-y-2 transition-all duration-500 shadow-[0_20px_40px_rgba(45,47,47,0.04)] hover:shadow-[0_30px_60px_rgba(45,47,47,0.08)]">
+                    <div
+                        class="absolute -top-10 -right-10 p-10 opacity-5 group-hover:opacity-10 transition-all duration-700 group-hover:rotate-12 group-hover:scale-110">
+                        <span class="material-symbols-outlined text-[12rem] text-primary">rocket_launch</span>
+                    </div>
+                    <div class="relative z-10 mt-12 md:mt-24">
+                        <h4
+                            class="text-3xl font-black font-headline mb-4 group-hover:text-primary transition-colors duration-300">
+                            Innovative Solutions</h4>
+                        <p class="text-on-surface-variant text-base leading-relaxed max-w-md">We push boundaries with
+                            creative technologies and unique storytelling approaches that disrupt standard market
+                            noise.</p>
+                    </div>
+                </div>
+
+                <!-- Small Feature 1: Data-Driven -->
+                <div
+                    class="bg-primary p-8 rounded-[2rem] text-on-primary flex flex-col justify-between group hover:-translate-y-2 transition-all duration-500 shadow-[0_20px_40px_rgba(101,47,231,0.15)] hover:shadow-[0_30px_60px_rgba(101,47,231,0.25)] relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+                    </div>
+                    <span
+                        class="material-symbols-outlined text-4xl mb-12 group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-500 origin-bottom-left">insights</span>
+                    <h4 class="text-xl font-black font-headline relative z-10">Data-Driven Strategy</h4>
+                </div>
+
+                <!-- Small Feature 2: End-to-End -->
+                <div
+                    class="bg-secondary p-8 rounded-[2rem] text-on-secondary flex flex-col justify-between group hover:-translate-y-2 transition-all duration-500 shadow-[0_20px_40px_rgba(0,104,89,0.15)] hover:shadow-[0_30px_60px_rgba(0,104,89,0.25)] relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+                    </div>
+                    <span
+                        class="material-symbols-outlined text-4xl mb-12 group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-500 origin-bottom-left">verified_user</span>
+                    <h4 class="text-xl font-black font-headline relative z-10">End-to-End Execution</h4>
+                </div>
+
+                <!-- Small Feature 3: Market Research -->
+                <div
+                    class="bg-tertiary-container p-8 rounded-[2rem] text-on-tertiary-container flex flex-col justify-between group hover:-translate-y-2 transition-all duration-500 shadow-[0_20px_40px_rgba(45,47,47,0.04)] hover:shadow-[0_30px_60px_rgba(45,47,47,0.08)] relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-500">
+                    </div>
+                    <span
+                        class="material-symbols-outlined text-4xl mb-12 group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-500 origin-bottom-left">search</span>
+                    <h4 class="text-xl font-black font-headline relative z-10">Market Research</h4>
+                </div>
+
+                <!-- Wide Feature: Agile Execution -->
+                <div
+                    class="md:col-span-2 lg:col-span-3 bg-[#ffffff] rounded-[2rem] p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6 group hover:-translate-y-2 transition-all duration-500 shadow-[0_20px_40px_rgba(45,47,47,0.04)] hover:shadow-[0_30px_60px_rgba(45,47,47,0.08)]">
+                    <div
+                        class="w-16 h-16 rounded-[1.25rem] bg-primary flex items-center justify-center text-white shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-md shadow-primary/20">
+                        <span class="material-symbols-outlined text-3xl">bolt</span>
+                    </div>
+                    <div>
+                        <h4
+                            class="text-xl font-black font-headline mb-2 group-hover:text-primary transition-colors duration-300">
+                            Agile Execution</h4>
+                        <p class="text-on-surface-variant text-sm leading-relaxed max-w-2xl">Rapid turnaround without
+                            compromising
+                            quality, ensuring your brand stays relevant in a fast-paced world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Super Team Section -->
+    <section class="py-20 bg-surface overflow-hidden" id="team">
+        <div class="section-container">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center flex-col-reverse lg:flex-row">
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-sm font-black tracking-[0.3em] text-primary uppercase mb-4">Our Super Team</h2>
+                    <h3 class="text-3xl lg:text-4xl font-black font-headline leading-tight mb-6 tracking-tight">Concept
+                        to
+                        Installation, We've Got You Covered.</h3>
+                    <p class="text-lg text-on-surface-variant leading-relaxed mb-8 font-medium">
+                        A team of creative thinkers, strategists, and execution experts working seamlessly from concept
+                        to installation — ensuring every campaign leaves a lasting impact.
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <div class="flex -space-x-4">
+                            <img class="w-14 h-14 rounded-full border-4 border-surface object-cover"
+                                alt="Professional portrait of a young female marketing strategist"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx0ejK-epqbuJe-HdIuNAKWPCLDr0lD1C49JTte0u5iX0gwQQKI8DuuUXdB5XeiV1M5OS6RGrU-pqKIHpWCm_60KxdDDhN3eMUDt3eiswQorH7pebl_jK_lvxSwxT_kM6F7twuSTuhwm9qsqtp5Mh-qqZcAetWcodB2jVhnGvZjlaEOQLHQOua07htGonlDt0KClhygtg9gTWw_ov110kpuHnfDdEnq1-FlkfQWCMJHM2-s5pKB-Es0sBoL5Ubewm6ySqpjIXGpYQ" />
+                            <img class="w-14 h-14 rounded-full border-4 border-surface object-cover"
+                                alt="Portrait of a smiling male creative director"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuASY0tEFIhij62nov8LyOiAReiHYZj2f6ELcpvQpjzv3j_iBbur0zx73O0Ia01JA_wK-yq_R4qLPuC5IZxsU65fpBjKaMHIzdi1qMvBvF7M8_ngxtOEuyrmsGXru4p2P1DYSrXhzeNdCHLsXZT-jNehV8DdI0lTdtzTGTFFcRAStGgjs8jOTfG2lzwpQbC4pnbhRxSNWlT43jfAFnz_D1IfRBEdqdE5HPjUhWbLrwnDpFUks_kgBmCrx1A-c48P2uuxN8RsCHENjFA" />
+                            <img class="w-14 h-14 rounded-full border-4 border-surface object-cover"
+                                alt="Portrait of a confident female account manager"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQcZMSO6SooCBeQ9Dem2ULpPgHJUJl3tjolmq9PAU_I0c4hNj9sqJT25bSZLpY597wq_KCsP9PRkr2VSMVtH_cN3IJC8IC1GIHVyN3qENIyO-oYwI56iDrRg2T7AnuycJTzjbpKNN_H5ZnQh2VvHblWD9mt2p5t63SRLLir8iG1el3rukmfIQheEwLcbBSiEVmvzbzgfz0o5V9SAwCxpA9VO7j4-S42qJQZr8jMln9LLAK6qoxyznN16Wx3LFYYdeRYs_YWLdnWL0" />
+                            <div
+                                class="w-14 h-14 rounded-full border-4 border-surface bg-primary flex items-center justify-center text-white font-bold text-lg">
+                                +24</div>
+                        </div>
+                        <span class="text-on-surface-variant font-bold">Expert Professionals</span>
+                    </div>
+                </div>
+                <div class="relative order-1 lg:order-2">
+                    <img class="rounded-[2.5rem] shadow-2xl w-full"
+                        alt="Diverse group of young professionals collaborating"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz8jUzkvoXtZX8jBZn95emJaHzu-xXvab4e32KgKTjiSpyqtJr-LoyilWtcnxL_YG2eudSohzL_EOVFLCk-vA-6YFXUW_idcF7DRkaxW1U9pwkwZzYuV_i56zCdwJC0VT3hYLT5inVbA6_A9jOHxFA3knLTTF1AGrXlGd7eX8WTqdVdzexxIwkBLbilXMApdbVPrxCdAadF6u9ekMDJOcyCbr0-FEzV7SQ7p0oJOa8D9sRrDeaS-BVEiRGAswALbMfBgkEoSXL0ic" />
+                    <div class="absolute -top-8 -right-8 w-48 h-48 bg-primary rounded-full opacity-10 blur-3xl -z-10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section class="py-20 lg:py-32 bg-surface" id="portfolio">
+        <div class="section-container">
+            <div class="text-center max-w-3xl mx-auto mb-12 md:mb-20 space-y-4">
+                <h2 class="text-sm font-black tracking-[0.4em] text-primary uppercase">Our Work &amp; Impact</h2>
+                <h3 class="text-3xl lg:text-5xl font-black font-headline tracking-tight">A showcase of creativity,
+                    strategy, and
+                    results across various industries in India.</h3>
+            </div>
+            <!-- Category Filter -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16">
+                <button data-filter="all"
+                    class="portfolio-filter-btn px-8 py-3 rounded-xl font-bold text-sm tracking-widest uppercase transition-all duration-300 bg-brand-gradient text-white shadow-lg shadow-primary/20 border border-transparent">All</button>
+                <button data-filter="ooh"
+                    class="portfolio-filter-btn px-8 py-3 rounded-xl font-bold text-sm tracking-widest uppercase transition-all duration-300 bg-transparent text-on-surface hover:text-primary border border-surface-variant hover:border-primary">OOH</button>
+                <button data-filter="branding"
+                    class="portfolio-filter-btn px-8 py-3 rounded-xl font-bold text-sm tracking-widest uppercase transition-all duration-300 bg-transparent text-on-surface hover:text-primary border border-surface-variant hover:border-primary">Branding</button>
+                <button data-filter="digital"
+                    class="portfolio-filter-btn px-8 py-3 rounded-xl font-bold text-sm tracking-widest uppercase transition-all duration-300 bg-transparent text-on-surface hover:text-primary border border-surface-variant hover:border-primary">Digital</button>
+                <button data-filter="production"
+                    class="portfolio-filter-btn px-8 py-3 rounded-xl font-bold text-sm tracking-widest uppercase transition-all duration-300 bg-transparent text-on-surface hover:text-primary border border-surface-variant hover:border-primary">Production</button>
+            </div>
+
+            <!-- Portfolio Masonry Grid -->
+            <div class="portfolio-masonry">
+                <!-- Large Vertical Item -->
+                <div data-category="ooh"
+                    class="portfolio-item portfolio-item-large group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Billboard in Mumbai Metro"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFefyMtuwuD7NWnX2f663m81BMojavv0dFlY5KeivBGBG0AEIZfWdu7bA2ZsssvgVtLxXWz9eWGtvzA--5v6m0vKl6pbKqdFAlYoZHJd27t08tRKqqj6ikGCQ5neN4gQDPUIaFWNayR68OqanVAyL9_l-XzIlkqBV3bHSF557-ihC_YdoIeyEZxeCL7ZP_g4ez_JURAksvS3EIXh8VaBhiSrdp31W4h5VFHt247x1h9yxl_KfJ9bTwSqN_yutG7aOr403IpF6eKCE" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
+                        <div class="backdrop-blur-md bg-white/10 p-6 rounded-3xl border border-white/20">
+                            <span
+                                class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-2 block">OOH
+                                • Campaign</span>
+                            <h4 class="text-2xl font-black text-white font-headline">Mumbai Skyline Domination</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Wide Item -->
+                <div data-category="branding"
+                    class="portfolio-item portfolio-item-wide group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="LED Branding Van"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuChIHla3XA3MIuuABuraxwjbI57-TKf3xZtVKEb77gdI8wVYSIyDx_hjveYTbI21hFUBCOnKnccHtIak--rvGBupevLUthnUlJd9ewSe0Lfg3lDpd4qiaxJre4U9Xj5F46MKRQGHuphXGCCpdt_4M5wfUIz3CydAC7vIBxkUS3F9Xvxgca0WCNbY108oz0Ma4d6mnn9Zv0964Ekrx6cyhwURiDh9OhLr4y1aNO1gQmBba2-HsqQlpYnvqyLFI_hVuM6_tYSoTSC-JI" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
+                        <div class="backdrop-blur-md bg-white/10 p-6 rounded-3xl border border-white/20">
+                            <span
+                                class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-2 block">Mobile
+                                • Branding</span>
+                            <h4 class="text-2xl font-black text-white font-headline">Nationwide LED Van Roadshow</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Standard Item -->
+                <div data-category="production"
+                    class="portfolio-item group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Cinema Advertising"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw8AuzA6_PWneeV9G9uO7CDKluNA50Fr2P4AvYEBXZ6UP96eAnUGRNK4UO9ITafK5YTsijxHHmaSXpuB4SgpdAwy-QV2qLW7Xmlh3o_EeraaCguYBlrhcpPCg9i-kg6PddgdW6FPGPVbOn3YQiYSTCw9HUoL01WSf9BfQjaYZyh2T3Auo61r_VBWPODwdyyQ6lYmaXty3NXLmSJFZkxOPvXzlx_0eyBJvQP3qwIpZMqOhas9XCXUAaS-v0zod5sxb6HI1X0Ned0ns" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <div class="backdrop-blur-md bg-white/10 p-5 rounded-3xl border border-white/20">
+                            <span
+                                class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-1 block">Cinema
+                                • Media</span>
+                            <h4 class="text-xl font-black text-white font-headline">PVR In-Screen Impact</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Standard Item -->
+                <div data-category="branding"
+                    class="portfolio-item group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Retail Mall Branding"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw973wehPi47mYiUzx_bLAgfNyadd4QybITtlxYl3EUYhiykqEGaae7n5fHRjl6TBB9cWBSxD9392byJGDytX4YwvfK9EJnul6HvE5l0BYDX2wHaCUeo_u4SxxjqjEaOCiHKPffW91D3IiJ_IPgv7Pl5ueuvyoKL6NwbPvJBSb3b_OUd_6k6qBNf2zMjZ70yg5QoXpWJQ8N2Dj89NbhCxOQ_0isCsJ1k4Togmxa2fAcawgiSKnVsXf8bzq3s3IgVHqp_GXRRMJS-4" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <div class="backdrop-blur-md bg-white/10 p-5 rounded-3xl border border-white/20">
+                            <span
+                                class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-1 block">Retail
+                                • Experiential</span>
+                            <h4 class="text-xl font-black text-white font-headline">Mall of India Atrium Takeover</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Another Wide Item -->
+                <div data-category="digital"
+                    class="portfolio-item portfolio-item-wide group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Digital Billboard"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw8AuzA6_PWneeV9G9uO7CDKluNA50Fr2P4AvYEBXZ6UP96eAnUGRNK4UO9ITafK5YTsijxHHmaSXpuB4SgpdAwy-QV2qLW7Xmlh3o_EeraaCguYBlrhcpPCg9i-kg6PddgdW6FPGPVbOn3YQiYSTCw9HUoL01WSf9BfQjaYZyh2T3Auo61r_VBWPODwdyyQ6lYmaXty3NXLmSJFZkxOPvXzlx_0eyBJvQP3qwIpZMqOhas9XCXUAaS-v0zod5sxb6HI1X0Ned0ns" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
+                        <div class="backdrop-blur-md bg-white/10 p-6 rounded-3xl border border-white/20">
+                            <span
+                                class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-2 block">Digital
+                                • LED Wall</span>
+                            <h4 class="text-2xl font-black text-white font-headline">Lucknow Smart City Digital Wraps
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Filtering Script -->
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const filterBtns = document.querySelectorAll('.portfolio-filter-btn');
+                    const items = document.querySelectorAll('.portfolio-item');
+
+                    filterBtns.forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            // Reset state for all buttons
+                            filterBtns.forEach(b => {
+                                b.classList.remove('bg-brand-gradient', 'text-white', 'shadow-lg', 'shadow-primary/20', 'border-transparent');
+                                b.classList.add('bg-transparent', 'text-on-surface', 'border', 'border-surface-variant');
+                            });
+
+                            // Apply active state
+                            btn.classList.add('bg-brand-gradient', 'text-white', 'shadow-lg', 'shadow-primary/20', 'border-transparent');
+                            btn.classList.remove('bg-transparent', 'text-on-surface', 'border', 'border-surface-variant');
+
+                            const filterValue = btn.getAttribute('data-filter');
+
+                            items.forEach(item => {
+                                // First scale down and fade out
+                                item.classList.remove('opacity-100', 'scale-100');
+                                item.classList.add('opacity-0', 'scale-95');
+
+                                setTimeout(() => {
+                                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                                        item.style.display = 'block';
+                                        // Slight delay mapped to rendering cycles
+                                        requestAnimationFrame(() => {
+                                            item.classList.remove('opacity-0', 'scale-95');
+                                            item.classList.add('opacity-100', 'scale-100');
+                                        });
+                                    } else {
+                                        item.style.display = 'none';
+                                    }
+                                }, 300); // Wait for fade-out transition
+                            });
+                        });
+                    });
+                });
+            </script>
+            <div class="mt-20 text-center">
+                <button
+                    class="btn-outline px-12 py-5 rounded-[1.5rem] font-black text-lg group inline-flex items-center gap-4">
+                    View All Projects
+                    <span
+                        class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Process Section (Methodology) -->
+    <section class="py-24 lg:py-32 bg-[#0c0f0f] relative overflow-hidden" id="process">
+        <!-- Attractive Ambient Glowing Orbs -->
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 -z-10 animate-pulse"
+            style="animation-duration: 4s;"></div>
+        <div
+            class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/3 -z-10">
+        </div>
+
+        <div class="section-container relative z-10">
+            <div
+                class="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-24 mb-20 lg:mb-32 animate-fade-in-up">
+                <div class="max-w-2xl">
+                    <h2 class="text-sm font-black tracking-[0.4em] text-primary uppercase mb-6 flex items-center gap-4">
+                        <span class="w-12 h-[2px] bg-primary"></span>
+                        Our Methodology
+                    </h2>
+                    <h3
+                        class="text-4xl md:text-5xl lg:text-7xl font-black font-headline tracking-tighter leading-tight text-white/95">
+                        The <span class="text-brand-gradient">Architecture</span> <br class="hidden md:block" /><span
+                            class="text-white/40 font-medium text-3xl md:text-4xl lg:text-5xl block mt-4 tracking-tight">Of
+                            Market Dominance</span></h3>
+                </div>
+                <div class="max-w-md lg:pt-20">
+                    <p
+                        class="text-white/60 text-lg leading-relaxed font-medium border-l-[3px] border-primary/30 pl-6 hover:border-primary transition-colors duration-500">
+                        We don't just execute campaigns. We engineer strategic ecosystems designed to shift market
+                        perception and drive undeniable ROI through our five-stage iterative protocol.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-0 relative">
+
+                <!-- Step 01 -->
+                <div
+                    class="group relative bg-white/5 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none rounded-[2rem] lg:rounded-none lg:border-t-2 border-white/10 p-8 lg:p-0 lg:pt-10 hover:border-primary transition-colors duration-500 shadow-2xl lg:shadow-none hover:-translate-y-2 lg:hover:-translate-y-0">
+                    <div
+                        class="text-6xl md:text-7xl font-black text-white/10 font-headline mb-6 group-hover:text-primary transition-colors duration-500">
+                        01</div>
+                    <h4
+                        class="text-2xl font-black font-headline mb-4 text-white/90 group-hover:text-primary transition-colors duration-300">
+                        Discovery</h4>
+                    <p class="text-white/50 text-sm leading-relaxed font-medium lg:pr-6">Deep-dive extraction of your
+                        brand's unique DNA and untapping hidden market voids.</p>
+                </div>
+
+                <!-- Step 02 (Staggered) -->
+                <div
+                    class="group relative bg-white/5 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none rounded-[2rem] lg:rounded-none lg:border-t-2 border-white/10 p-8 lg:p-0 lg:pt-10 hover:border-primary transition-colors duration-500 shadow-2xl lg:shadow-none hover:-translate-y-2 lg:hover:-translate-y-0 lg:mt-24">
+                    <div
+                        class="text-6xl md:text-7xl font-black text-white/10 font-headline mb-6 group-hover:text-primary transition-colors duration-500">
+                        02</div>
+                    <h4
+                        class="text-2xl font-black font-headline mb-4 text-white/90 group-hover:text-primary transition-colors duration-300">
+                        Strategy</h4>
+                    <p class="text-white/50 text-sm leading-relaxed font-medium lg:pr-6">Precision mapping of custom,
+                        data-backed roadmaps tailored strictly for your objective.</p>
+                </div>
+
+                <!-- Step 03 -->
+                <div
+                    class="group relative bg-white/5 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none rounded-[2rem] lg:rounded-none lg:border-t-2 border-white/10 p-8 lg:p-0 lg:pt-10 hover:border-primary transition-colors duration-500 shadow-2xl lg:shadow-none hover:-translate-y-2 lg:hover:-translate-y-0">
+                    <div
+                        class="text-6xl md:text-7xl font-black text-white/10 font-headline mb-6 group-hover:text-primary transition-colors duration-500">
+                        03</div>
+                    <h4
+                        class="text-2xl font-black font-headline mb-4 text-white/90 group-hover:text-primary transition-colors duration-300">
+                        Creative</h4>
+                    <p class="text-white/50 text-sm leading-relaxed font-medium lg:pr-6">Forging magnetic visual
+                        narratives that compel action and command audience attention.</p>
+                </div>
+
+                <!-- Step 04 (Staggered) -->
+                <div
+                    class="group relative bg-white/5 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none rounded-[2rem] lg:rounded-none lg:border-t-2 border-white/10 p-8 lg:p-0 lg:pt-10 hover:border-primary transition-colors duration-500 shadow-2xl lg:shadow-none hover:-translate-y-2 lg:hover:-translate-y-0 lg:mt-24">
+                    <div
+                        class="text-6xl md:text-7xl font-black text-white/10 font-headline mb-6 group-hover:text-primary transition-colors duration-500">
+                        04</div>
+                    <h4
+                        class="text-2xl font-black font-headline mb-4 text-white/90 group-hover:text-primary transition-colors duration-300">
+                        Deploy</h4>
+                    <p class="text-white/50 text-sm leading-relaxed font-medium lg:pr-6">Aggressive, precision-targeted
+                        launch protocol across selected high-impact channels.</p>
+                </div>
+
+                <!-- Step 05 -->
+                <div
+                    class="group relative bg-white/5 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none rounded-[2rem] lg:rounded-none lg:border-t-2 border-white/10 p-8 lg:p-0 lg:pt-10 hover:border-primary transition-colors duration-500 shadow-2xl lg:shadow-none hover:-translate-y-2 lg:hover:-translate-y-0">
+                    <div
+                        class="text-6xl md:text-7xl font-black text-white/10 font-headline mb-6 group-hover:text-primary transition-colors duration-500">
+                        05</div>
+                    <h4
+                        class="text-2xl font-black font-headline mb-4 text-white/90 group-hover:text-primary transition-colors duration-300">
+                        Optimize</h4>
+                    <p class="text-white/50 text-sm leading-relaxed font-medium lg:pr-6">Relentless, iterative analysis
+                        scaling up winning variants for exponential ROI.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Contact Us Section -->
+    <section class="py-20 lg:py-32 bg-surface-container-low/30" id="contact">
+        <div class="section-container">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+                <div class="space-y-8 lg:space-y-12 animate-fade-in-up">
+                    <div>
+                        <h2 class="text-sm font-black tracking-[0.3em] text-primary uppercase mb-4">Contact Our
+                            Strategists</h2>
+                        <h3 class="text-4xl lg:text-5xl font-black font-headline mb-6 lg:mb-8 tracking-tight">Let's
+                            Craft Your Brand's Next
+                            Chapter.</h3>
+                        <p class="text-xl text-on-surface-variant font-medium leading-relaxed max-w-lg">Our dedicated
+                            team is ready to analyze your challenges and build a roadmap for measurable success.</p>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-6 group">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-white shadow-lg flex items-center justify-center shrink-0 border border-surface-variant/30 group-hover:scale-110 transition-transform">
+                                <span
+                                    class="material-symbols-outlined font-black text-primary text-3xl">location_on</span>
+                            </div>
+                            <div>
+                                <p class="text-lg font-black text-on-surface mb-1">HQ &amp; Operations</p>
+                                <p class="text-on-surface-variant font-medium">Gomti Nagar, Lucknow, India 226010</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6 group">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-white shadow-lg flex items-center justify-center shrink-0 border border-surface-variant/30 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined font-black text-primary text-3xl">call</span>
+                            </div>
+                            <div>
+                                <p class="text-lg font-black text-on-surface mb-1">Direct Line</p>
+                                <p class="text-on-surface-variant font-medium">+91 9479727294</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6 group">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-white shadow-lg flex items-center justify-center shrink-0 border border-surface-variant/30 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined font-black text-primary text-3xl">mail</span>
+                            </div>
+                            <div>
+                                <p class="text-lg font-black text-on-surface mb-1">Digital Mail</p>
+                                <p class="text-on-surface-variant font-medium">admotion2024@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white p-12 rounded-[3rem] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.1)] border border-surface-variant/20">
+                    <form action="https://formspree.io/f/mlgorqbj" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label
+                                    class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Full
+                                    Name</label>
+                                <input name="fullName" required
+                                    class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium"
+                                    placeholder="Johnathan Smith" type="text" />
+                            </div>
+                            <div class="space-y-2">
+                                <label
+                                    class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Email
+                                    Address</label>
+                                <input name="email" required
+                                    class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium"
+                                    placeholder="john@company.com" type="email" />
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label
+                                    class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Phone
+                                    Number</label>
+                                <input name="phone"
+                                    class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium"
+                                    placeholder="+91 00000 00000" type="tel" />
+                            </div>
+                            <div class="space-y-2">
+                                <label
+                                    class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Inquiry
+                                    Type</label>
+                                <select name="inquiryType"
+                                    class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium appearance-none">
+                                    <option>Outdoor (OOH) Campaign</option>
+                                    <option>Cinema &amp; Media Buying</option>
+                                    <option>Broadcasting Strategy</option>
+                                    <option>Holistic Brand Growth</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label
+                                class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Your
+                                Objectives</label>
+                            <textarea name="objectives" required
+                                class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 h-36 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium resize-none"
+                                placeholder="Briefly describe your goals..."></textarea>
+                        </div>
+                        <button class="btn-outline w-full py-5 rounded-[1.25rem] font-black text-xl shadow-xl"
+                            type="submit" id="submit-btn">
+                            <span id="btn-text">Launch Inquiry</span>
+                            <span id="btn-loader" class="hidden inline-flex items-center gap-2">
+                                <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                        stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor"
+                                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                                    </path>
+                                </svg>
+                                Sending...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-zinc-50 pt-16 pb-8 border-t border-surface-container relative">
+        <div class="absolute top-0 left-0 w-full h-1 bg-brand-gradient"></div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 section-container mx-auto mb-8 md:mb-16">
+            <div class="col-span-1 md:col-span-1 space-y-6">
+                <div class="flex items-center gap-3">
+                    <img alt="Magnificence Media Logo" class="h-8 w-auto"
+                        data-alt="Magnificence Media official logo featuring colorful brand marks"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeYSD8q2IbIAZEJsX9GWoy_zxWqgg-vqcC1Q4mDRDaSRAOt1gJWh0rskmIsI0ryeQ-7ChOFvsmQxqUziEYECgpxzakNA4kHFum0bI60G34h9lbvjn1_3mN7BmhN736XVJQprJlCl6lserwAxNDRWR_0VISn6YMCPtvq6njoY2U_8PhPLBP0Ac5ETmld6Gn05-pVACEuyyAP37Zme_PGmLEwaPxntwQ0_Iu7uUIEihDhHmfQNzN3ANuNkSP-ejUSAyF6UvdzAVQ4l4" />
+                    <span class="text-xl font-black text-zinc-900 font-headline">Magnificence Media</span>
+                </div>
+                <p class="text-zinc-500 text-sm leading-relaxed">Transforming Indian brands with cutting-edge
+                    advertising and creative storytelling across all media platforms.</p>
+                <div class="flex gap-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm hover:brand-gradient hover:text-white transition-all cursor-pointer">
+                        <span class="material-symbols-outlined text-xl">share</span>
+                    </div>
+                    <div
+                        class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm hover:brand-gradient hover:text-white transition-all cursor-pointer">
+                        <span class="material-symbols-outlined text-xl">public</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h5 class="font-bold text-zinc-900 mb-6 font-headline">Services</h5>
+                <ul class="space-y-4">
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">Outdoor
+                            Advertising</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">Cinema Ads</a>
+                    </li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">Radio &amp;
+                            TV</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">Newspaper</a>
+                    </li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">Digital Wall</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold text-zinc-900 mb-6 font-headline">Company</h5>
+                <ul class="space-y-4">
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">About Us</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">Our Team</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">Contact Us</a>
+                    </li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">Privacy
+                            Policy</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">Terms of
+                            Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold text-zinc-900 mb-6 font-headline">Contact Information</h5>
+                <ul class="space-y-6">
+                    <li class="flex gap-4">
+                        <span class="material-symbols-outlined text-primary">location_on</span>
+                        <span class="text-zinc-500 text-sm">Gomti Nagar, Lucknow, India</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="material-symbols-outlined text-primary">call</span>
+                        <span class="text-zinc-500 text-sm">+91 9479727294</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="material-symbols-outlined text-primary">mail</span>
+                        <span class="text-zinc-500 text-sm">admotion2024@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="px-8 max-w-screen-2xl mx-auto border-t border-zinc-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-zinc-500 text-sm">© 2024 Magnificence Media and Services. All rights reserved.</p>
+            <p class="text-zinc-400 text-xs">Crafted for Excellence.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
