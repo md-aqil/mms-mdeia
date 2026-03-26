@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Our Work | Magnificence Media</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6200EE",
+                        "primary-dark": "#4b00d1",
+                        "primary-container": "#f3e8ff",
+                        "on-primary-container": "#1e005a",
+                        "surface-tint": "#6200EE",
+                        "on-surface-variant": "#5a5c5c",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d2d5d5",
+                        "surface-variant": "#dbdddd",
+                        "surface-bright": "#f6f6f6",
+                        "surface-container-low": "#f4f3f7",
+                        "surface-container": "#e7e8e8",
+                        "surface-container-high": "#e1e3e3",
+                        "surface-container-highest": "#dbdddd",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fdfcff",
+                        "on-background": "#1c1b1f",
+                        "on-surface": "#1c1b1f",
+                        "outline": "#757777",
+                        "outline-variant": "#acadad",
+                        "secondary": "#006859",
+                        "secondary-container": "#68fadd",
+                        "on-secondary": "#c2ffef",
+                        "on-secondary-container": "#005d4f",
+                        "tertiary": "#7e5200",
+                        "tertiary-container": "#feaa00",
+                        "on-tertiary": "#fff0e2",
+                        "on-tertiary-container": "#503300",
+                        "inverse-surface": "#0c0f0f",
+                        "inverse-on-surface": "#9c9d9d",
+                        "inverse-primary": "#9a7bff",
+                        "error": "#b41340",
+                        "error-container": "#f74b6d",
+                        "on-error": "#ffefef",
+                        "on-error-container": "#510017"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .text-brand-gradient {
+            background: linear-gradient(to right, #006859, #22c55e, #eab308, #f97316, #ef4444, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-brand-gradient {
+            background: linear-gradient(135deg, #006859, #22c55e, #eab308, #f97316, #ef4444, #9333ea);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(24px) saturate(180%);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .section-container {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-container {
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .section-container {
+                padding-left: 5rem;
+                padding-right: 5rem;
+            }
+        }
+
+        .btn-primary {
+            background-color: #6200EE;
+            color: white;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-primary:hover {
+            background-color: #4b00d1;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px -6px rgba(98, 0, 238, 0.5);
+        }
+
+        .portfolio-masonry {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-auto-rows: 250px;
+            gap: 2rem;
+        }
+
+        .portfolio-item-large {
+            grid-row: span 2;
+        }
+
+        .portfolio-item-wide {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 1024px) {
+            .portfolio-item-wide {
+                grid-column: span 1;
+            }
+        }
+
+        /* Mobile menu transition */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        #mobile-menu.open {
+            max-height: 600px;
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        /* Auto-scroll animation for client logos */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+
+        .animate-scroll:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary/20">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-surface-container/30">
+        <div class="px-6 lg:px-12 py-3 max-w-[1800px] mx-auto">
+            <div class="hidden lg:flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <a href="index.html">
+                        <img alt="Magnificence Media Logo" class="h-12 w-auto" src="logo.png" />
+                    </a>
+                </div>
+                <div class="flex items-center gap-8">
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest" href="index.html#services">Services</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest" href="index.html#portfolio">Work</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest" href="index.html#contact">Contact</a>
+                    <button class="open-quote-modal btn-primary px-7 py-3 rounded-full font-black text-sm shadow-lg shadow-primary/20 hover:scale-105 transition-all">
+                        Get Quote
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Layout -->
+            <div class="flex lg:hidden justify-between items-center">
+                <a href="index.html">
+                    <img alt="Magnificence Media Logo" class="h-12 w-auto" src="logo.png" />
+                </a>
+                <button id="mobile-menu-btn" class="text-on-surface p-2 focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden bg-white/95 backdrop-blur-xl border-b border-surface-container/30 px-6 flex flex-col gap-4 shadow-xl">
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest" href="index.html#services">Services</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest" href="index.html#portfolio">Work</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest" href="index.html#contact">Contact</a>
+            <button class="open-quote-modal btn-primary px-7 py-3 mt-2 rounded-xl font-extrabold text-sm shadow-sm w-full">
+                Get Quote
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="media/portfolio/image1.jpeg" 
+                 alt="Our Work" 
+                 class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/70"></div>
+        </div>
+        
+        <div class="section-container relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl text-white font-headline font-black leading-tight tracking-tight mb-6">
+                    Our <span class="text-brand-gradient">Work</span>
+                </h1>
+                <p class="text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
+                    Explore our portfolio of successful campaigns across various industries. From retail branding to corporate advertising, we've helped brands make their mark.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="py-20 lg:py-32 bg-surface" id="portfolio">
+        <div class="section-container">
+            <div class="text-center max-w-3xl mx-auto mb-12 md:mb-20 space-y-4">
+                <h2 class="text-sm font-black tracking-[0.4em] text-primary uppercase">Our Work & Impact</h2>
+                <h3 class="text-3xl lg:text-5xl font-black font-headline tracking-tight">Made with love by talented designers</h3>
+            </div>
+            
+            <!-- Category Filter -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16">
+                <button data-filter="all" class="portfolio-filter-btn px-8 py-3 rounded-xl font-bold text-sm tracking-widest uppercase transition-all duration-300 bg-brand-gradient text-white shadow-lg shadow-primary/20 border-transparent">All</button>
+                <button data-filter="design" class="portfolio-filter-btn px-8 py-3 rounded-xl font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:text-primary hover:border-primary bg-transparent text-on-surface border border-surface-variant">Design</button>
+                <button data-filter="jewelry" class="portfolio-filter-btn px-8 py-3 rounded-xl font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:text-primary hover:border-primary bg-transparent text-on-surface border border-surface-variant">Jewelry</button>
+                <button data-filter="real-estate" class="portfolio-filter-btn px-8 py-3 rounded-xl font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:text-primary hover:border-primary bg-transparent text-on-surface border border-surface-variant">Real Estate</button>
+                <button data-filter="grocery" class="portfolio-filter-btn px-8 py-3 rounded-xl font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:text-primary hover:border-primary bg-transparent text-on-surface border border-surface-variant">Grocery</button>
+                <button data-filter="dentists" class="portfolio-filter-btn px-8 py-3 rounded-xl font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:text-primary hover:border-primary bg-transparent text-on-surface border border-surface-variant">Dentists</button>
+                <button data-filter="cosmetics" class="portfolio-filter-btn px-8 py-3 rounded-xl font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:text-primary hover:border-primary bg-transparent text-on-surface border border-surface-variant">Cosmetics</button>
+                <button data-filter="clothing" class="portfolio-filter-btn px-8 py-3 rounded-xl font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:text-primary hover:border-primary bg-transparent text-on-surface border border-surface-variant">Clothing</button>
+            </div>
+
+            <!-- Portfolio Masonry Grid -->
+            <div class="portfolio-masonry">
+                <!-- Item 1 -->
+                <div data-category="design"
+                    class="portfolio-item portfolio-item-large group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Our Work"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/image1.jpeg" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
+                        <div class="backdrop-blur-md bg-white/10 p-6 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-2 block">Design</span>
+                            <h4 class="text-2xl font-black text-white font-headline">Creative Design</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div data-category="jewelry"
+                    class="portfolio-item portfolio-item-wide group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Our Work"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/image2.jpg" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
+                        <div class="backdrop-blur-md bg-white/10 p-6 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-2 block">Dentists</span>
+                            <h4 class="text-2xl font-black text-white font-headline">Dental Clinic Branding</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div data-category="real-estate"
+                    class="portfolio-item group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Our Work"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/image3.jpeg" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <div class="backdrop-blur-md bg-white/10 p-5 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-1 block">Jewelry</span>
+                            <h4 class="text-xl font-black text-white font-headline">Jewelry Display</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div data-category="grocery"
+                    class="portfolio-item group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Our Work"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/image4.jpg" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <div class="backdrop-blur-md bg-white/10 p-5 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-1 block">Real Estate</span>
+                            <h4 class="text-xl font-black text-white font-headline">Property Signage</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div data-category="dentists"
+                    class="portfolio-item group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Our Work"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/image5.jpeg" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <div class="backdrop-blur-md bg-white/10 p-5 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-1 block">Grocery</span>
+                            <h4 class="text-xl font-black text-white font-headline">Grocery Display</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div data-category="cosmetics"
+                    class="portfolio-item group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Our Work"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/image6.jpeg" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <div class="backdrop-blur-md bg-white/10 p-5 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-1 block">Cosmetics</span>
+                            <h4 class="text-xl font-black text-white font-headline">Beauty Store Display</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 7 -->
+                <div data-category="clothing"
+                    class="portfolio-item group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Our Work"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/image7.jpeg" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <div class="backdrop-blur-md bg-white/10 p-5 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-1 block">Clothing</span>
+                            <h4 class="text-xl font-black text-white font-headline">Fashion Store Display</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 8 -->
+                <div data-category="design"
+                    class="portfolio-item portfolio-item-wide group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Our Work"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/image8.jpeg" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
+                        <div class="backdrop-blur-md bg-white/10 p-6 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-2 block">Design</span>
+                            <h4 class="text-2xl font-black text-white font-headline">Brand Identity</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 9 -->
+                <div data-category="jewelry"
+                    class="portfolio-item group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Our Work"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/image9.jpeg" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <div class="backdrop-blur-md bg-white/10 p-5 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-1 block">Jewelry</span>
+                            <h4 class="text-xl font-black text-white font-headline">Luxury Display</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 10 -->
+                <div data-category="real-estate"
+                    class="portfolio-item group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Our Work"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/image10.jpeg" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <div class="backdrop-blur-md bg-white/10 p-5 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-1 block">Real Estate</span>
+                            <h4 class="text-xl font-black text-white font-headline">Property Signage</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 11 -->
+                <div data-category="grocery"
+                    class="portfolio-item group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Our Work"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/image11.png" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <div class="backdrop-blur-md bg-white/10 p-5 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-1 block">Grocery</span>
+                            <h4 class="text-xl font-black text-white font-headline">Supermarket Display</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 12 -->
+                <div data-category="dentists"
+                    class="portfolio-item portfolio-item-large group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Our Work"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/image12.png" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
+                        <div class="backdrop-blur-md bg-white/10 p-6 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-2 block">Dentists</span>
+                            <h4 class="text-2xl font-black text-white font-headline">Medical Signage</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Inshop Item 1 -->
+                <div data-category="cosmetics"
+                    class="portfolio-item group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Inshop Branding"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/inshop_image1.jpeg" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <div class="backdrop-blur-md bg-white/10 p-5 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-1 block">Cosmetics</span>
+                            <h4 class="text-xl font-black text-white font-headline">Beauty Salon Interior</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Inshop Item 2 -->
+                <div data-category="clothing"
+                    class="portfolio-item portfolio-item-wide group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Inshop Branding"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/inshop_image3.jpeg" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
+                        <div class="backdrop-blur-md bg-white/10 p-6 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-2 block">Clothing</span>
+                            <h4 class="text-2xl font-black text-white font-headline">Fashion Boutique</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Inshop Item 3 -->
+                <div data-category="design"
+                    class="portfolio-item group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Inshop Branding"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/inshop_image8.jpeg" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <div class="backdrop-blur-md bg-white/10 p-5 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-1 block">Design</span>
+                            <h4 class="text-xl font-black text-white font-headline">Custom Signage</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Inshop Item 4 -->
+                <div data-category="jewelry"
+                    class="portfolio-item portfolio-item-large group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Inshop Branding"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/inshop_image12.jpeg" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
+                        <div class="backdrop-blur-md bg-white/10 p-6 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-2 block">Jewelry</span>
+                            <h4 class="text-2xl font-black text-white font-headline">Showroom Display</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Inshop Item 5 -->
+                <div data-category="real-estate"
+                    class="portfolio-item group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Inshop Branding"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/inshop_image15.png" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <div class="backdrop-blur-md bg-white/10 p-5 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-1 block">Real Estate</span>
+                            <h4 class="text-xl font-black text-white font-headline">Property Display</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Inshop Item 6 -->
+                <div data-category="grocery"
+                    class="portfolio-item group relative overflow-hidden rounded-[2.5rem] cursor-pointer transition-all duration-500 transform opacity-100 scale-100">
+                    <img alt="Inshop Branding"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="media/portfolio/inshop_image20.jpeg" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <div class="backdrop-blur-md bg-white/10 p-5 rounded-3xl border border-white/20">
+                            <span class="text-xs font-black text-secondary-fixed-dim uppercase tracking-widest mb-1 block">Grocery</span>
+                            <h4 class="text-xl font-black text-white font-headline">Store Branding</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="mt-20 text-center">
+                <a href="#portfolio" class="btn-primary px-12 py-5 rounded-[1.5rem] font-black text-lg shadow-xl inline-block">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Partners Section -->
+    <section class="py-20 bg-surface overflow-hidden">
+        <div class="section-container">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-black tracking-[0.3em] text-primary uppercase mb-4">Trusted Partners</h2>
+                <h3 class="text-3xl lg:text-4xl font-black font-headline text-on-surface">Our Esteemed Clients</h3>
+            </div>
+            
+            <!-- Scrolling Logo Container -->
+            <div class="relative">
+                <!-- Gradient Overlays for fade effect -->
+                <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-surface to-transparent z-10 pointer-events-none"></div>
+                <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-surface to-transparent z-10 pointer-events-none"></div>
+                
+                <!-- Scrolling Track -->
+                <div class="flex animate-scroll gap-12">
+                    <!-- First Set of Logos -->
+                    <img src="Clients/zomato.png" alt="Zomato" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/hero.png" alt="Hero" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/lic.webp" alt="LIC" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/amity.avif" alt="Amity" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/mama.png" alt="Mama" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/campa.avif" alt="Campa" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/eldeco.webp" alt="Eldeco" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/shalimar.webp" alt="Shalimar" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/duke.png" alt="Duke" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/suzlon.png" alt="Suzlon" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/up.webp" alt="UP" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/tanisk.png" alt="Tanisk" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/amirican-express.avif" alt="American Express" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <!-- Duplicate Set for Infinite Scroll -->
+                    <img src="Clients/zomato.png" alt="Zomato" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/hero.png" alt="Hero" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/lic.webp" alt="LIC" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/amity.avif" alt="Amity" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/mama.png" alt="Mama" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/campa.avif" alt="Campa" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/eldeco.webp" alt="Eldeco" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/shalimar.webp" alt="Shalimar" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/duke.png" alt="Duke" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/suzlon.png" alt="Suzlon" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/up.webp" alt="UP" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/tanisk.png" alt="Tanisk" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/amirican-express.avif" alt="American Express" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 lg:py-32 bg-inverse-surface relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=1920&q=80" 
+                 alt="Advertising" 
+                 class="w-full h-full object-cover opacity-30" />
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+        
+        <div class="section-container relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-sm font-black tracking-[0.4em] text-white uppercase mb-6">Partner With Us</h2>
+                <h3 class="text-4xl md:text-5xl lg:text-6xl font-black font-headline text-white leading-tight mb-8">
+                    Let's Create Something <span class="text-brand-gradient">Amazing Together</span>
+                </h3>
+                <p class="text-xl text-white/70 leading-relaxed mb-10">
+                    Ready to elevate your brand? Contact us today for a personalized consultation and see how we can transform your vision into reality.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="open-quote-modal btn-primary px-12 py-5 rounded-2xl font-black text-xl">
+                        Get a Quote
+                    </button>
+                    <a href="index.html#contact" class="btn-outline px-12 py-5 rounded-2xl font-black text-xl border-white text-white hover:border-white hover:text-white hover:bg-white/10">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <footer class="bg-zinc-50 pt-16 pb-8 border-t border-surface-container relative">
+        <div class="absolute top-0 left-0 w-full h-1 bg-brand-gradient"></div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 section-container mx-auto mb-8 md:mb-16">
+            <div class="col-span-1 md:col-span-1 space-y-6">
+                <div class="flex items-center gap-3">
+                    <a href="index.html">
+                        <img alt="Magnificence Media Logo" class="h-10 w-auto" src="logo.png" />
+                    </a>
+                </div>
+                <p class="text-zinc-500 text-sm leading-relaxed">Transforming Indian brands with cutting-edge advertising and creative storytelling across all media platforms.</p>
+            </div>
+            <div>
+                <h5 class="font-bold text-zinc-900 mb-6 font-headline">Services</h5>
+                <ul class="space-y-4">
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="airports.html">Airport Advertising</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="mall.html">Mall Advertising</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="bus-shelter.html">Bus Shelter</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="billboard.html">Billboard</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="bus-branding.html">Bus Branding</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="train-branding.html">Train Branding</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="led-display.html">LED Display</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="mobile-van.html">Mobile Van</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold text-zinc-900 mb-6 font-headline">Company</h5>
+                <ul class="space-y-4">
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="index.html#about">About Us</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="works.html">Our Work</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="index.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold text-zinc-900 mb-6 font-headline">Contact</h5>
+                <ul class="space-y-4">
+                    <li class="flex gap-3 text-zinc-500 text-sm">
+                        <span class="material-symbols-outlined text-primary">location_on</span>
+                        Gomti Nagar, Lucknow
+                    </li>
+                    <li class="flex gap-3 text-zinc-500 text-sm">
+                        <span class="material-symbols-outlined text-primary">call</span>
+                        +91 9479727294
+                    </li>
+                    <li class="flex gap-3 text-zinc-500 text-sm">
+                        <span class="material-symbols-outlined text-primary">mail</span>
+                        admotion2024@gmail.com
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="px-8 max-w-screen-2xl mx-auto border-t border-zinc-200 pt-8 text-center">
+            <p class="text-zinc-500 text-sm">© 2024 Magnificence Media and Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('open');
+                });
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.remove('open');
+                    });
+                });
+            }
+
+            // Portfolio Filtering
+            const filterBtns = document.querySelectorAll('.portfolio-filter-btn');
+            const items = document.querySelectorAll('.portfolio-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Reset state for all buttons
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-brand-gradient', 'text-white', 'shadow-lg', 'shadow-primary/20', 'border-transparent');
+                        b.classList.add('bg-transparent', 'text-on-surface', 'border', 'border-surface-variant');
+                    });
+
+                    // Apply active state
+                    btn.classList.add('bg-brand-gradient', 'text-white', 'shadow-lg', 'shadow-primary/20', 'border-transparent');
+                    btn.classList.remove('bg-transparent', 'text-on-surface', 'border', 'border-surface-variant');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    items.forEach(item => {
+                        // First scale down and fade out
+                        item.classList.remove('opacity-100', 'scale-100');
+                        item.classList.add('opacity-0', 'scale-95');
+
+                        setTimeout(() => {
+                            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                                item.style.display = 'block';
+                                requestAnimationFrame(() => {
+                                    item.classList.remove('opacity-0', 'scale-95');
+                                    item.classList.add('opacity-100', 'scale-100');
+                                });
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }, 300);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,835 @@
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Magnificence Media And Services | Bus Shelter Advertising</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6200EE",
+                        "primary-dark": "#4b00d1",
+                        "tertiary-fixed-dim": "#ec9e00",
+                        "error-dim": "#a70138",
+                        "primary-container": "#f3e8ff",
+                        "on-tertiary-fixed-variant": "#5b3b00",
+                        "surface-tint": "#6200EE",
+                        "on-surface-variant": "#5a5c5c",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d2d5d5",
+                        "error-container": "#f74b6d",
+                        "tertiary": "#7e5200",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#dbdddd",
+                        "surface-bright": "#f6f6f6",
+                        "secondary-fixed": "#68fadd",
+                        "secondary-dim": "#005a4d",
+                        "secondary-fixed-dim": "#56ebcf",
+                        "tertiary-container": "#feaa00",
+                        "inverse-on-surface": "#9c9d9d",
+                        "on-primary-container": "#1e005a",
+                        "inverse-surface": "#0c0f0f",
+                        "on-secondary-fixed": "#00483d",
+                        "on-tertiary-container": "#503300",
+                        "background": "#fdfcff",
+                        "on-secondary": "#c2ffef",
+                        "on-secondary-container": "#005d4f",
+                        "primary-fixed-dim": "#9c7eff",
+                        "secondary-container": "#68fadd",
+                        "on-secondary-fixed-variant": "#006859",
+                        "tertiary-dim": "#6e4800",
+                        "tertiary-fixed": "#feaa00",
+                        "outline-variant": "#acadad",
+                        "on-primary-fixed": "#000000",
+                        "on-error": "#ffefef",
+                        "outline": "#757777",
+                        "on-tertiary-fixed": "#331f00",
+                        "on-primary-fixed-variant": "#32008a",
+                        "surface-container": "#e7e8e8",
+                        "on-error-container": "#510017",
+                        "primary-dim": "#5819db",
+                        "surface-container-highest": "#dbdddd",
+                        "on-background": "#1c1b1f",
+                        "inverse-primary": "#9a7bff",
+                        "on-tertiary": "#fff0e2",
+                        "surface": "#fdfcff",
+                        "primary-fixed": "#a98fff",
+                        "secondary": "#006859",
+                        "surface-container-low": "#f4f3f7",
+                        "error": "#b41340",
+                        "on-surface": "#1c1b1f",
+                        "surface-container-high": "#e1e3e3"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .text-brand-gradient {
+            background: linear-gradient(to right, #006859, #22c55e, #eab308, #f97316, #ef4444, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-brand-gradient {
+            background: linear-gradient(135deg, #006859, #22c55e, #eab308, #f97316, #ef4444, #9333ea);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-80px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(80px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(80px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal-scale.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+        .delay-500 { transition-delay: 500ms; }
+        .delay-600 { transition-delay: 600ms; }
+
+        .btn-primary {
+            background-color: #6200EE;
+            color: white;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-primary:hover {
+            background-color: #4b00d1;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px -6px rgba(98, 0, 238, 0.5);
+        }
+
+        .btn-outline {
+            border: 2px solid #dbdddd;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-outline:hover {
+            border-color: #6200EE;
+            color: #6200EE;
+            background-color: rgba(98, 0, 238, 0.04);
+            transform: translateY(-3px);
+        }
+
+        .card-hover {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        .section-container {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-container {
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .section-container {
+                padding-left: 5rem;
+                padding-right: 5rem;
+            }
+        }
+
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        #mobile-menu.open {
+            max-height: 600px;
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .counter {
+            display: inline-block;
+        }
+
+        /* Auto-scroll animation for client logos */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+
+        .animate-scroll:hover {
+            animation-play-state: paused;
+        }
+
+        /* Quote Modal */
+        .quote-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+        }
+
+        .quote-modal.active {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary/20">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-surface-container/30">
+        <div class="px-6 lg:px-12 py-3 lg:py-4 max-w-[1800px] mx-auto">
+            <div class="hidden lg:grid grid-cols-3 items-center">
+                <div class="flex items-center gap-6 xl:gap-10">
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-xs xl:text-sm uppercase tracking-[0.2em]"
+                        href="index.html">Home</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-xs xl:text-sm uppercase tracking-[0.2em]"
+                        href="index.html#services">Services</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-xs xl:text-sm uppercase tracking-[0.2em]"
+                        href="index.html#about">About</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-xs xl:text-sm uppercase tracking-[0.2em]"
+                        href="index.html#why-choose-us">Why Us</a>
+                </div>
+
+                <div class="flex flex-col items-center justify-center transform origin-top transition-transform duration-500 hover:scale-[1.02]">
+                    <img id="main-logo" alt="Magnificence Media Logo"
+                        class="h-16 xl:h-20 w-auto object-contain drop-shadow-sm transition-all duration-500"
+                        src="logo.png" />
+                </div>
+
+                <div class="flex items-center justify-end gap-6 xl:gap-8">
+                    <a class="text-primary font-extrabold text-xs xl:text-sm uppercase tracking-[0.2em]"
+                        href="index.html#portfolio">Work</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-xs xl:text-sm uppercase tracking-[0.2em]"
+                        href="index.html#process">Process</a>
+                    <button class="open-quote-modal btn-primary px-7 py-3 rounded-full font-black text-xs xl:text-sm shadow-xl shadow-primary/20 hover:scale-105 transition-all">
+                        Get Quote
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Layout -->
+            <div class="flex lg:hidden justify-between items-center transition-all duration-500">
+                <img id="mobile-logo" alt="Magnificence Media Logo"
+                    class="h-12 sm:h-14 w-auto object-contain transition-all duration-500" src="logo.png" />
+                <button id="mobile-menu-btn" class="text-on-surface p-2 focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="lg:hidden bg-white/95 backdrop-blur-xl border-b border-surface-container/30 px-6 flex flex-col gap-4 shadow-xl">
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest"
+                href="index.html">Home</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest"
+                href="index.html#services">Services</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest"
+                href="index.html#about">About</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest"
+                href="index.html#why-choose-us">Why Us</a>
+            <a class="text-primary font-extrabold text-sm uppercase tracking-widest" href="index.html#portfolio">Work</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest"
+                href="index.html#process">Process</a>
+            <button class="open-quote-modal btn-primary px-7 py-3 mt-2 rounded-xl font-extrabold text-sm shadow-sm w-full">
+                Get Quote
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[80vh] flex items-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="media/portfolio/image28.jpg" 
+                 alt="Bus Shelter Advertising" 
+                 class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+        
+        <div class="section-container relative z-10 w-full py-20">
+            <div class="max-w-4xl">
+                <span class="inline-block bg-primary/20 backdrop-blur-md px-4 py-2 rounded-full mb-6">
+                    <span class="text-white font-black text-sm uppercase tracking-[0.3em]">Bus Shelter Advertising</span>
+                </span>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black font-headline text-white leading-tight mb-8">
+                    Impactful Bus Shelter Ads <br class="hidden lg:block" />
+                    <span class="text-brand-gradient">By Magnificence Media</span>
+                </h1>
+                
+                <p class="text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
+                    We specialize in creating impactful Bus Shelter Advertising that connects brands with audiences on the move. Strategically placed at high-traffic locations, our bus shelters deliver maximum visibility, day and night.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="open-quote-modal btn-primary px-10 py-4 rounded-2xl font-black text-lg">
+                        Get a Quote
+                    </button>
+                    <a href="index.html#services" class="btn-outline px-10 py-4 rounded-2xl font-black text-lg border-white text-white hover:border-white hover:text-white hover:bg-white/10">
+                        Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-primary">
+        <div class="section-container">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <h4 class="text-4xl lg:text-5xl font-black font-headline text-white mb-2 counter" data-target="4000">0</h4>
+                    <p class="text-white/70 font-bold uppercase tracking-wider text-sm">Brands</p>
+                </div>
+                <div class="text-center">
+                    <h4 class="text-4xl lg:text-5xl font-black font-headline text-white mb-2 counter" data-target="50">0</h4>
+                    <p class="text-white/70 font-bold uppercase tracking-wider text-sm">Cities</p>
+                </div>
+                <div class="text-center">
+                    <h4 class="text-4xl lg:text-5xl font-black font-headline text-white mb-2 counter" data-target="28">0</h4>
+                    <p class="text-white/70 font-bold uppercase tracking-wider text-sm">Years Experience</p>
+                </div>
+                <div class="text-center">
+                    <h4 class="text-4xl lg:text-5xl font-black font-headline text-white mb-2 counter" data-target="100">0</h4>
+                    <p class="text-white/70 font-bold uppercase tracking-wider text-sm">Professionals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="py-20 lg:py-32 bg-surface">
+        <div class="section-container">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+                <div class="reveal-left">
+                    <span class="text-sm font-black tracking-[0.3em] text-primary uppercase mb-4 block">Why Bus Shelter Ads</span>
+                    <h2 class="text-3xl lg:text-5xl font-black font-headline leading-tight mb-6">
+                        Connect with Audiences On The Move
+                    </h2>
+                    <p class="text-lg text-on-surface-variant leading-relaxed mb-6">
+                        With bold designs, clear messaging, and innovative layouts, we ensure your brand stands out and leaves a lasting impression on commuters and pedestrians.
+                    </p>
+                    <p class="text-lg text-on-surface-variant leading-relaxed">
+                        Bus shelter advertising offers 24/7 exposure with visibility to both passersby and travelers, making it one of the most cost-effective outdoor advertising solutions.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-6 reveal-right">
+                    <div class="bg-white p-6 rounded-[2rem] shadow-lg">
+                        <span class="material-symbols-outlined text-4xl text-primary font-black mb-4">visibility</span>
+                        <h4 class="text-lg font-black font-headline mb-2">Large Ads</h4>
+                        <p class="text-on-surface-variant text-sm">Targeting drivers and passersby with premium visibility</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-[2rem] shadow-lg">
+                        <span class="material-symbols-outlined text-4xl text-primary font-black mb-4">near_me</span>
+                        <h4 class="text-lg font-black font-headline mb-2">Directional</h4>
+                        <p class="text-on-surface-variant text-sm">Guide customers directly to your business</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-[2rem] shadow-lg">
+                        <span class="material-symbols-outlined text-4xl text-primary font-black mb-4">schedule</span>
+                        <h4 class="text-lg font-black font-headline mb-2">24/7 Exposure</h4>
+                        <p class="text-on-surface-variant text-sm">Round-the-clock brand visibility</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-[2rem] shadow-lg">
+                        <span class="material-symbols-outlined text-4xl text-primary font-black mb-4">groups</span>
+                        <h4 class="text-lg font-black font-headline mb-2">Dual Reach</h4>
+                        <p class="text-on-surface-variant text-sm">Both pedestrians and vehicle occupants</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-20 lg:py-32 bg-surface-container-low">
+        <div class="section-container">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-black tracking-[0.3em] text-primary uppercase mb-4 reveal-up">Recent Campaigns</h2>
+                <h3 class="text-3xl lg:text-5xl font-black font-headline tracking-tight reveal-up delay-100">
+                    Bus Shelter Advertising Gallery
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden rounded-[2rem] shadow-xl reveal-scale">
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80" 
+                         alt="Bus Shelter Ad - Rapido" 
+                         class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h4 class="text-xl font-black text-white font-headline">Rapido Promotion</h4>
+                        <p class="text-white/70 text-sm">50% Off Campaign</p>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-[2rem] shadow-xl reveal-scale delay-100">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" 
+                         alt="Bus Shelter Ad - 77 Jeans" 
+                         class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h4 class="text-xl font-black text-white font-headline">77 Jeans</h4>
+                        <p class="text-white/70 text-sm">Fashion Brand Campaign</p>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-[2rem] shadow-xl reveal-scale delay-200">
+                    <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600&q=80" 
+                         alt="Bus Shelter Billboard" 
+                         class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h4 class="text-xl font-black text-white font-headline">Brand Display</h4>
+                        <p class="text-white/70 text-sm">Premium Placement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Partners Section -->
+    <section class="py-20 bg-surface overflow-hidden">
+        <div class="section-container">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-black tracking-[0.3em] text-primary uppercase mb-4">Trusted Partners</h2>
+                <h3 class="text-3xl lg:text-4xl font-black font-headline text-on-surface">Our Esteemed Clients</h3>
+            </div>
+            
+            <!-- Scrolling Logo Container -->
+            <div class="relative">
+                <!-- Gradient Overlays for fade effect -->
+                <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-surface to-transparent z-10 pointer-events-none"></div>
+                <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-surface to-transparent z-10 pointer-events-none"></div>
+                
+                <!-- Scrolling Track -->
+                <div class="flex animate-scroll gap-12">
+                    <!-- First Set of Logos -->
+                    <img src="Clients/zomato.png" alt="Zomato" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/hero.png" alt="Hero" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/lic.webp" alt="LIC" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/amity.avif" alt="Amity" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/mama.png" alt="Mama" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/campa.avif" alt="Campa" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/eldeco.webp" alt="Eldeco" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/shalimar.webp" alt="Shalimar" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/duke.png" alt="Duke" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/suzlon.png" alt="Suzlon" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/up.webp" alt="UP" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/tanisk.png" alt="Tanisk" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/amirican-express.avif" alt="American Express" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <!-- Duplicate Set for Infinite Scroll -->
+                    <img src="Clients/zomato.png" alt="Zomato" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/hero.png" alt="Hero" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/lic.webp" alt="LIC" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/amity.avif" alt="Amity" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/mama.png" alt="Mama" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/campa.avif" alt="Campa" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/eldeco.webp" alt="Eldeco" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/shalimar.webp" alt="Shalimar" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/duke.png" alt="Duke" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/suzlon.png" alt="Suzlon" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/up.webp" alt="UP" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/tanisk.png" alt="Tanisk" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/amirican-express.avif" alt="American Express" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 lg:py-32 bg-inverse-surface relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80" 
+                 alt="Bus Shelter" 
+                 class="w-full h-full object-cover opacity-30" />
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+        
+        <div class="section-container relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-sm font-black tracking-[0.4em] text-secondary-fixed-dim uppercase mb-6 reveal-up">Partner With Us</h2>
+                <h3 class="text-4xl md:text-5xl lg:text-6xl font-black font-headline text-white leading-tight mb-8 reveal-up delay-100">
+                    Make Your Brand <span class="text-brand-gradient">Impossible to Miss</span>
+                </h3>
+                <p class="text-xl text-white/70 leading-relaxed mb-10 reveal-up delay-200">
+                    Contact Magnificence Media And Services today for impactful bus shelter advertising that reaches thousands of commuters daily.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 reveal-up delay-300">
+                    <button class="open-quote-modal btn-primary px-12 py-5 rounded-2xl font-black text-xl">
+                        Get a Quote
+                    </button>
+                    <button class="btn-outline px-12 py-5 rounded-2xl font-black text-xl border-white text-white hover:border-white hover:text-white hover:bg-white/10">
+                        Call Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 lg:py-32 bg-surface-container-low/30" id="contact">
+        <div class="section-container">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+                <div class="space-y-8 lg:space-y-12">
+                    <div>
+                        <h2 class="text-sm font-black tracking-[0.3em] text-primary uppercase mb-4 reveal-up">Contact Us</h2>
+                        <h3 class="text-4xl lg:text-5xl font-black font-headline mb-6 lg:mb-8 tracking-tight reveal-up delay-100">
+                            Let's Elevate Your Brand
+                        </h3>
+                        <p class="text-xl text-on-surface-variant font-medium leading-relaxed max-w-lg reveal-up delay-200">
+                            Our team is ready to help you create impactful bus shelter advertising campaigns.
+                        </p>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-6 group reveal-up delay-300">
+                            <div class="w-14 h-14 rounded-2xl bg-white shadow-lg flex items-center justify-center shrink-0 border border-surface-variant/30 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined font-black text-primary text-3xl">location_on</span>
+                            </div>
+                            <div>
+                                <p class="text-lg font-black text-on-surface mb-1">Headquarters</p>
+                                <p class="text-on-surface-variant font-medium">Gomti Nagar, Lucknow, India 226010</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6 group reveal-up delay-400">
+                            <div class="w-14 h-14 rounded-2xl bg-white shadow-lg flex items-center justify-center shrink-0 border border-surface-variant/30 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined font-black text-primary text-3xl">call</span>
+                            </div>
+                            <div>
+                                <p class="text-lg font-black text-on-surface mb-1">Direct Line</p>
+                                <p class="text-on-surface-variant font-medium">+91 9479727294</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6 group reveal-up delay-500">
+                            <div class="w-14 h-14 rounded-2xl bg-white shadow-lg flex items-center justify-center shrink-0 border border-surface-variant/30 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined font-black text-primary text-3xl">mail</span>
+                            </div>
+                            <div>
+                                <p class="text-lg font-black text-on-surface mb-1">Email</p>
+                                <p class="text-on-surface-variant font-medium">admotion2024@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-12 rounded-[3rem] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.1)] border border-surface-variant/20 reveal-scale">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Full Name</label>
+                                <input required class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium" placeholder="Your Name" type="text" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Company Name</label>
+                                <input required class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium" placeholder="Company Name" type="text" />
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Email Address</label>
+                                <input required class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium" placeholder="your@email.com" type="email" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Phone Number</label>
+                                <input class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium" placeholder="+91" type="tel" />
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Message</label>
+                            <textarea required class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 h-36 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium resize-none" placeholder="Tell us about your bus shelter advertising requirements..."></textarea>
+                        </div>
+                        <button class="btn-primary w-full py-5 rounded-[1.25rem] font-black text-xl shadow-xl" type="submit">
+                            Send Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-50 pt-16 pb-8 border-t border-surface-container relative">
+        <div class="absolute top-0 left-0 w-full h-1 bg-brand-gradient"></div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 section-container mx-auto mb-8 md:mb-16">
+            <div class="col-span-1 md:col-span-1 space-y-6">
+                <div class="flex items-center gap-3">
+                    <img alt="Magnificence Media Logo" class="h-8 w-auto" src="logo.png" />
+                    <span class="text-xl font-black text-zinc-900 font-headline">Magnificence Media</span>
+                </div>
+                <p class="text-zinc-500 text-sm leading-relaxed">Transforming Indian brands with cutting-edge advertising and creative storytelling across all media platforms.</p>
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm hover:brand-gradient hover:text-white transition-all cursor-pointer">
+                        <span class="material-symbols-outlined text-xl">share</span>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm hover:brand-gradient hover:text-white transition-all cursor-pointer">
+                        <span class="material-symbols-outlined text-xl">public</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h5 class="font-bold text-zinc-900 mb-6 font-headline">Services</h5>
+                <ul class="space-y-4">
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="airports.html">Airport Advertising</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="bus-shelter.html">Bus Shelter</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="billboard.html">Billboard</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="bus-branding.html">Bus Branding</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="train-branding.html">Train Branding</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="led-display.html">LED Display</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="mobile-van.html">Mobile Van</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold text-zinc-900 mb-6 font-headline">Company</h5>
+                <ul class="space-y-4">
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="index.html#about">About Us</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="works.html">Our Work</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="index.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold text-zinc-900 mb-6 font-headline">Contact</h5>
+                <ul class="space-y-6">
+                    <li class="flex gap-4">
+                        <span class="material-symbols-outlined text-primary">location_on</span>
+                        <span class="text-zinc-500 text-sm">Gomti Nagar, Lucknow</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="material-symbols-outlined text-primary">call</span>
+                        <span class="text-zinc-500 text-sm">+91 9479727294</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="material-symbols-outlined text-primary">mail</span>
+                        <span class="text-zinc-500 text-sm">admotion2024@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="px-8 max-w-screen-2xl mx-auto border-t border-zinc-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-zinc-500 text-sm">© 2024 Magnificence Media And Services. All rights reserved.</p>
+            <p class="text-zinc-400 text-xs">Crafted for Excellence.</p>
+        </div>
+    </footer>
+
+    <!-- Quote Modal -->
+    <div id="quote-modal" class="quote-modal fixed inset-0 z-[100]">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeQuoteModal()"></div>
+        <div class="relative z-10 w-full max-w-2xl mx-4 my-8">
+            <div class="bg-white rounded-[3rem] shadow-2xl p-8 md:p-12 max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-center mb-8">
+                    <h3 class="text-2xl md:text-3xl font-black font-headline">Get a Quote</h3>
+                    <button onclick="closeQuoteModal()" class="p-2 hover:bg-surface-container-low rounded-full transition-colors">
+                        <span class="material-symbols-outlined text-3xl">close</span>
+                    </button>
+                </div>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Full Name</label>
+                            <input required class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium" placeholder="Your Name" type="text" />
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Company Name</label>
+                            <input class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium" placeholder="Company Name" type="text" />
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Email Address</label>
+                            <input required class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium" placeholder="your@email.com" type="email" />
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Phone Number</label>
+                            <input class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium" placeholder="+91" type="tel" />
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Service Type</label>
+                        <select class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium appearance-none">
+                            <option>Airport Advertising</option>
+                            <option>Mall Advertising</option>
+                            <option>Bus Shelter Advertising</option>
+                            <option>Billboard</option>
+                            <option>Bus Branding</option>
+                            <option>Train Branding</option>
+                            <option>LED Display</option>
+                            <option>Mobile Van</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Message</label>
+                        <textarea required class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 h-32 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium resize-none" placeholder="Tell us about your requirements..."></textarea>
+                    </div>
+                    <button class="btn-primary w-full py-5 rounded-[1.25rem] font-black text-xl shadow-xl" type="submit">
+                        Submit Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Quote Modal Functions
+        function openQuoteModal() {
+            document.getElementById('quote-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeQuoteModal() {
+            document.getElementById('quote-modal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Add event listeners to all quote buttons
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.open-quote-modal').forEach(btn => {
+                btn.addEventListener('click', openQuoteModal);
+            });
+
+            // Close modal on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeQuoteModal();
+            });
+        });
+
+        // Scroll Reveal Animation
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-up, .reveal-scale');
+            
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 100;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', reveal);
+        reveal();
+
+        // Number Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+
+                const updateCounter = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current) + '+';
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target + '+';
+                    }
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCounter();
+                            observer.unobserve(counter);
+                        }
+                    });
+                });
+
+                observer.observe(counter);
+            });
+        }
+
+        animateCounters();
+    </script>
+</body>
+
+</html>

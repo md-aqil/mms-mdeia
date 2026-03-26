@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Train Branding Advertising | Magnificence Media</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6200EE",
+                        "primary-dark": "#4b00d1",
+                        "primary-container": "#f3e8ff",
+                        "on-primary-container": "#1e005a",
+                        "surface-tint": "#6200EE",
+                        "on-surface-variant": "#5a5c5c",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d2d5d5",
+                        "surface-variant": "#dbdddd",
+                        "surface-bright": "#f6f6f6",
+                        "surface-container-low": "#f4f3f7",
+                        "surface-container": "#e7e8e8",
+                        "surface-container-high": "#e1e3e3",
+                        "surface-container-highest": "#dbdddd",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fdfcff",
+                        "on-background": "#1c1b1f",
+                        "on-surface": "#1c1b1f",
+                        "outline": "#757777",
+                        "outline-variant": "#acadad",
+                        "secondary": "#006859",
+                        "secondary-container": "#68fadd",
+                        "on-secondary": "#c2ffef",
+                        "on-secondary-container": "#005d4f",
+                        "tertiary": "#7e5200",
+                        "tertiary-container": "#feaa00",
+                        "on-tertiary": "#fff0e2",
+                        "on-tertiary-container": "#503300",
+                        "inverse-surface": "#0c0f0f",
+                        "inverse-on-surface": "#9c9d9d",
+                        "inverse-primary": "#9a7bff",
+                        "error": "#b41340",
+                        "error-container": "#f74b6d",
+                        "on-error": "#ffefef",
+                        "on-error-container": "#510017"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .text-brand-gradient {
+            background: linear-gradient(to right, #006859, #22c55e, #eab308, #f97316, #ef4444, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-brand-gradient {
+            background: linear-gradient(135deg, #006859, #22c55e, #eab308, #f97316, #ef4444, #9333ea);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(24px) saturate(180%);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .section-container {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-container {
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .section-container {
+                padding-left: 5rem;
+                padding-right: 5rem;
+            }
+        }
+
+        .btn-primary {
+            background-color: #6200EE;
+            color: white;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-primary:hover {
+            background-color: #4b00d1;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px -6px rgba(98, 0, 238, 0.5);
+        }
+
+        .btn-outline {
+            border: 2px solid #dbdddd;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-outline:hover {
+            border-color: #6200EE;
+            color: #6200EE;
+            background-color: rgba(98, 0, 238, 0.04);
+            transform: translateY(-3px);
+        }
+
+        /* Mobile menu transition */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        #mobile-menu.open {
+            max-height: 600px;
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .service-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Quote Modal Styles */
+        .quote-modal {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .quote-modal.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .quote-modal.active > div:last-child {
+            transform: translateY(0) scale(1);
+        }
+
+        .quote-modal > div:last-child {
+            transform: translateY(20px) scale(0.95);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Auto-scroll animation for client logos */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+
+        .animate-scroll:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary/20">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-surface-container/30">
+        <div class="px-6 lg:px-12 py-3 max-w-[1800px] mx-auto">
+            <div class="hidden lg:flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <a href="index.html">
+                        <img alt="Magnificence Media Logo" class="h-12 w-auto" src="logo.png" />
+                    </a>
+                </div>
+                <div class="flex items-center gap-8">
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest" href="index.html#services">Services</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest" href="index.html#portfolio">Work</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest" href="index.html#contact">Contact</a>
+                    <button class="open-quote-modal btn-primary px-7 py-3 rounded-full font-black text-sm shadow-lg shadow-primary/20 hover:scale-105 transition-all">
+                        Get Quote
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Layout -->
+            <div class="flex lg:hidden justify-between items-center">
+                <a href="index.html">
+                    <img alt="Magnificence Media Logo" class="h-12 w-auto" src="logo.png" />
+                </a>
+                <button id="mobile-menu-btn" class="text-on-surface p-2 focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden bg-white/95 backdrop-blur-xl border-b border-surface-container/30 px-6 flex flex-col gap-4 shadow-xl">
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest" href="index.html#services">Services</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest" href="index.html#portfolio">Work</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-bold text-sm uppercase tracking-widest" href="index.html#contact">Contact</a>
+            <button class="open-quote-modal btn-primary px-7 py-3 mt-2 rounded-xl font-extrabold text-sm shadow-sm w-full">
+                Get Quote
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[80vh] flex items-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="media/portfolio/image3.jpeg" 
+                 alt="Train Branding Advertising" 
+                 class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 left-10 w-80 h-80 bg-secondary/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="section-container relative z-10">
+            <div class="max-w-4xl text-left">
+                <div class="inline-flex items-center gap-2 bg-primary-container px-4 py-2 rounded-full mb-6">
+                    <span class="material-symbols-outlined text-primary">train</span>
+                    <span class="text-xs font-black text-primary uppercase tracking-widest">Transit Advertising</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black font-headline text-white leading-tight tracking-tight mb-6">
+                    Train <span class="text-brand-gradient">Branding</span> Advertising
+                </h1>
+                <p class="text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
+                    Transform trains into powerful moving billboards that carry your brand across cities, towns, and rural landscapes. With thousands of passengers traveling daily, train branding delivers unmatched reach and continuous impressions.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-start">
+                    <button class="open-quote-modal btn-primary px-10 py-4 rounded-2xl font-black text-lg shadow-xl">
+                        Get a Quote
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-gradient-to-r from-secondary to-primary">
+        <div class="section-container">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <h4 class="text-3xl md:text-4xl font-black font-headline text-white mb-2">4000+</h4>
+                    <p class="text-white/80 text-sm font-medium">Brands</p>
+                </div>
+                <div>
+                    <h4 class="text-3xl md:text-4xl font-black font-headline text-white mb-2">50+</h4>
+                    <p class="text-white/80 text-sm font-medium">Cities</p>
+                </div>
+                <div>
+                    <h4 class="text-3xl md:text-4xl font-black font-headline text-white mb-2">28+</h4>
+                    <p class="text-white/80 text-sm font-medium">Years Experience</p>
+                </div>
+                <div>
+                    <h4 class="text-3xl md:text-4xl font-black font-headline text-white mb-2">100+</h4>
+                    <p class="text-white/80 text-sm font-medium">Professionals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 lg:py-32 bg-surface" id="features">
+        <div class="section-container">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-black tracking-[0.3em] text-primary uppercase mb-4">Why Train Branding</h2>
+                <h3 class="text-3xl lg:text-5xl font-black font-headline text-on-surface tracking-tight">Powerful Moving Billboards Across Cities</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Feature 1 -->
+                <div class="service-card group bg-white rounded-[2.5rem] overflow-hidden shadow-lg">
+                    <div class="aspect-video overflow-hidden">
+                        <img alt="Moving Billboards Across Cities" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="media/portfolio/image3.jpeg" />
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-primary text-2xl font-black">commute</span>
+                        </div>
+                        <h4 class="text-xl font-black font-headline mb-4 group-hover:text-primary transition-colors">Moving Billboards Across Cities</h4>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Train branding transforms coaches into dynamic moving billboards that travel across cities, towns, and rural landscapes. With thousands of passengers and onlookers daily, your brand gains unmatched reach and visibility wherever the train goes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="service-card group bg-white rounded-[2.5rem] overflow-hidden shadow-lg">
+                    <div class="aspect-video overflow-hidden">
+                        <img alt="Engaging Passengers Inside the Journey" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="media/portfolio/image1.jpeg" />
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-primary text-2xl font-black">airline_seat_recline_normal</span>
+                        </div>
+                        <h4 class="text-xl font-black font-headline mb-4 group-hover:text-primary transition-colors">Engaging Passengers Inside the Journey</h4>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Interior branding ensures your message stays with passengers throughout their travel. Posters, digital panels, and seat-back ads create a captive environment where commuters naturally engage with your brand.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="service-card group bg-white rounded-[2.5rem] overflow-hidden shadow-lg">
+                    <div class="aspect-video overflow-hidden">
+                        <img alt="High-Frequency Impressions with Daily Commutes" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="media/portfolio/image5.jpeg" />
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-primary text-2xl font-black">schedule</span>
+                        </div>
+                        <h4 class="text-xl font-black font-headline mb-4 group-hover:text-primary transition-colors">High-Frequency Impressions with Daily Commutes</h4>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Trains run multiple times a day, ensuring repeated exposure for your campaign. Whether it's office-goers, students, or families, train branding delivers consistent impressions that strengthen recall and brand loyalty.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="service-card group bg-white rounded-[2.5rem] overflow-hidden shadow-lg">
+                    <div class="aspect-video overflow-hidden">
+                        <img alt="Cost-Effective Reach with Massive Impact" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="media/portfolio/image2.jpg" />
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-primary text-2xl font-black">trending_up</span>
+                        </div>
+                        <h4 class="text-xl font-black font-headline mb-4 group-hover:text-primary transition-colors">Cost-Effective Reach with Massive Impact</h4>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Compared to other formats, train branding offers exceptional value by combining scale, mobility, and affordability. Your campaign achieves mass visibility at minimal cost, making it ideal for both local and national brands.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types of Train Branding -->
+    <section class="py-20 bg-surface-container-low">
+        <div class="section-container">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-black tracking-[0.3em] text-primary uppercase mb-4">Our Solutions</h2>
+                <h3 class="text-3xl lg:text-4xl font-black font-headline text-on-surface">Types of Train Branding We Offer</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-[2rem] shadow-lg text-center">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl font-black">crop_square</span>
+                    </div>
+                    <h4 class="text-lg font-black font-headline mb-2">Exterior Train Wraps</h4>
+                    <p class="text-on-surface-variant text-sm">Full or partial exterior wraps for maximum visibility on tracks and stations</p>
+                </div>
+                <div class="bg-white p-8 rounded-[2rem] shadow-lg text-center">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl font-black">view_sidebar</span>
+                    </div>
+                    <h4 class="text-lg font-black font-headline mb-2">Interior Panel Advertising</h4>
+                    <p class="text-on-surface-variant text-sm">Posters, digital panels, and seat-back ads for captive passenger audience</p>
+                </div>
+                <div class="bg-white p-8 rounded-[2rem] shadow-lg text-center">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl font-black">railway_alert</span>
+                    </div>
+                    <h4 class="text-lg font-black font-headline mb-2">Station Branding</h4>
+                    <p class="text-on-surface-variant text-sm">Platform and station ads for extended reach to waiting passengers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-surface">
+        <div class="section-container">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-black tracking-[0.3em] text-primary uppercase mb-4">How It Works</h2>
+                <h3 class="text-3xl lg:text-4xl font-black font-headline text-on-surface">Your Train Branding Campaign</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-black mx-auto mb-4">1</div>
+                    <h4 class="text-lg font-black font-headline mb-2">Consultation</h4>
+                    <p class="text-on-surface-variant text-sm">Discuss your goals, routes, and target audiences.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-black mx-auto mb-4">2</div>
+                    <h4 class="text-lg font-black font-headline mb-2">Creative Design</h4>
+                    <p class="text-on-surface-variant text-sm">Bold visuals with bilingual messaging for maximum impact.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-black mx-auto mb-4">3</div>
+                    <h4 class="text-lg font-black font-headline mb-2">Installation</h4>
+                    <p class="text-on-surface-variant text-sm">Professional wrapping on interior and exterior surfaces.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-black mx-auto mb-4">4</div>
+                    <h4 class="text-lg font-black font-headline mb-2">Launch & Report</h4>
+                    <p class="text-on-surface-variant text-sm">Your campaign goes live with photo documentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Partners Section -->
+    <section class="py-20 bg-surface overflow-hidden">
+        <div class="section-container">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-black tracking-[0.3em] text-primary uppercase mb-4">Trusted Partners</h2>
+                <h3 class="text-3xl lg:text-4xl font-black font-headline text-on-surface">Our Esteemed Clients</h3>
+            </div>
+            
+            <!-- Scrolling Logo Container -->
+            <div class="relative">
+                <!-- Gradient Overlays for fade effect -->
+                <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-surface to-transparent z-10 pointer-events-none"></div>
+                <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-surface to-transparent z-10 pointer-events-none"></div>
+                
+                <!-- Scrolling Track -->
+                <div class="flex animate-scroll gap-12">
+                    <!-- First Set of Logos -->
+                    <img src="Clients/zomato.png" alt="Zomato" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/hero.png" alt="Hero" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/lic.webp" alt="LIC" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/amity.avif" alt="Amity" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/mama.png" alt="Mama" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/campa.avif" alt="Campa" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/eldeco.webp" alt="Eldeco" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/shalimar.webp" alt="Shalimar" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/duke.png" alt="Duke" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/suzlon.png" alt="Suzlon" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/up.webp" alt="UP" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/tanisk.png" alt="Tanisk" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/amirican-express.avif" alt="American Express" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <!-- Duplicate Set for Infinite Scroll -->
+                    <img src="Clients/zomato.png" alt="Zomato" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/hero.png" alt="Hero" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/lic.webp" alt="LIC" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/amity.avif" alt="Amity" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/mama.png" alt="Mama" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/campa.avif" alt="Campa" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/eldeco.webp" alt="Eldeco" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/shalimar.webp" alt="Shalimar" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/duke.png" alt="Duke" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/suzlon.png" alt="Suzlon" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/up.webp" alt="UP" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/tanisk.png" alt="Tanisk" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                    <img src="Clients/amirican-express.avif" alt="American Express" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 lg:py-32 bg-gradient-to-r from-secondary via-primary-dark to-primary relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute top-0 right-0 w-full h-full bg-black/10"></div>
+        </div>
+        <div class="section-container relative z-10 text-center">
+            <h2 class="text-3xl lg:text-5xl font-black font-headline text-white mb-6">Ready to Take Your Brand Across the Rails?</h2>
+            <p class="text-white/80 text-lg max-w-2xl mx-auto mb-10">
+                Let us transform your brand into a moving landmark across cities and towns. Get in touch for a customized train branding solution.
+            </p>
+            <button class="open-quote-modal bg-white text-primary px-12 py-5 rounded-[2rem] font-black text-xl shadow-2xl hover:scale-105 transition-all">
+                Get a Free Quote
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-50 pt-16 pb-8 border-t border-surface-container relative">
+        <div class="absolute top-0 left-0 w-full h-1 bg-brand-gradient"></div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 section-container mx-auto mb-8 md:mb-16">
+            <div class="col-span-1 md:col-span-1 space-y-6">
+                <div class="flex items-center gap-3">
+                    <img alt="Magnificence Media Logo" class="h-10 w-auto" src="logo.png" />
+                </div>
+                <p class="text-zinc-500 text-sm leading-relaxed">Transforming Indian brands with cutting-edge advertising and creative storytelling across all media platforms.</p>
+            </div>
+            <div>
+                <h5 class="font-bold text-zinc-900 mb-6 font-headline">Services</h5>
+                <ul class="space-y-4">
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="airports.html">Airport Advertising</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="mall.html">Mall Advertising</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="bus-shelter.html">Bus Shelter</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="billboard.html">Billboard</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="bus-branding.html">Bus Branding</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="train-branding.html">Train Branding</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold text-zinc-900 mb-6 font-headline">Company</h5>
+                <ul class="space-y-4">
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="index.html#about">About Us</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="index.html#portfolio">Our Work</a></li>
+                    <li><a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="index.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold text-zinc-900 mb-6 font-headline">Contact</h5>
+                <ul class="space-y-4">
+                    <li class="flex gap-3 text-zinc-500 text-sm">
+                        <span class="material-symbols-outlined text-primary">location_on</span>
+                        Gomti Nagar, Lucknow
+                    </li>
+                    <li class="flex gap-3 text-zinc-500 text-sm">
+                        <span class="material-symbols-outlined text-primary">call</span>
+                        +91 9479727294
+                    </li>
+                    <li class="flex gap-3 text-zinc-500 text-sm">
+                        <span class="material-symbols-outlined text-primary">mail</span>
+                        admotion2024@gmail.com
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="px-8 max-w-screen-2xl mx-auto border-t border-zinc-200 pt-8 text-center">
+            <p class="text-zinc-500 text-sm">© 2024 Magnificence Media and Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Quote Modal -->
+    <div id="quote-modal" class="quote-modal fixed inset-0 z-[100]">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeQuoteModal()"></div>
+        <div class="relative z-10 w-full max-w-2xl mx-4 my-8">
+            <div class="bg-white rounded-[3rem] shadow-2xl p-8 md:p-12 max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-center mb-8">
+                    <h3 class="text-2xl md:text-3xl font-black font-headline">Get a Quote</h3>
+                    <button onclick="closeQuoteModal()" class="p-2 hover:bg-surface-container-low rounded-full transition-colors">
+                        <span class="material-symbols-outlined text-3xl">close</span>
+                    </button>
+                </div>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Full Name</label>
+                            <input required class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium" placeholder="Your Name" type="text" />
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Company Name</label>
+                            <input class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium" placeholder="Company Name" type="text" />
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Email Address</label>
+                            <input required class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium" placeholder="your@email.com" type="email" />
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Phone Number</label>
+                            <input class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium" placeholder="+91" type="tel" />
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Service Type</label>
+                        <select class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium appearance-none">
+                            <option>Exterior Train Wraps</option>
+                            <option>Interior Panel Advertising</option>
+                            <option>Station Branding</option>
+                            <option>Full Train Branding Package</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-black text-on-surface-variant ml-1 uppercase tracking-widest">Your Objectives</label>
+                        <textarea required class="w-full bg-surface-container-low/50 border border-surface-variant/50 rounded-[1.25rem] px-5 py-4 h-32 focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all font-medium resize-none" placeholder="Briefly describe your goals..."></textarea>
+                    </div>
+                    <button class="btn-outline w-full py-5 rounded-[1.25rem] font-black text-xl shadow-xl" type="submit">
+                        Submit Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('open');
+                });
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.remove('open');
+                    });
+                });
+            }
+
+            // Quote Modal Functions
+            function openQuoteModal() {
+                const modal = document.getElementById('quote-modal');
+                if (modal) {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            function closeQuoteModal() {
+                const modal = document.getElementById('quote-modal');
+                if (modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+
+            // Add event listeners for quote modal buttons
+            document.querySelectorAll('.open-quote-modal').forEach(btn => {
+                btn.addEventListener('click', openQuoteModal);
+            });
+
+            // Close modal on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeQuoteModal();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
